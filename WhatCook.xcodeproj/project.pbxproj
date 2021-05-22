@@ -10,8 +10,6 @@
 		A52A3C5B26519C1000E8A69B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A3C5926519C1000E8A69B /* FavoritesViewController.swift */; };
 		A52A3C5C26519C1000E8A69B /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52A3C5A26519C1000E8A69B /* FavoritesViewController.xib */; };
 		A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6A265153CC008B2E3B /* AppDelegate.swift */; };
-		A5C01C6D265153CC008B2E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6C265153CC008B2E3B /* SceneDelegate.swift */; };
-		A5C01C6F265153CC008B2E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6E265153CC008B2E3B /* ViewController.swift */; };
 		A5C01C72265153CC008B2E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C01C70265153CC008B2E3B /* Main.storyboard */; };
 		A5C01C74265153CF008B2E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C01C73265153CF008B2E3B /* Assets.xcassets */; };
 		A5C01C77265153CF008B2E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C01C75265153CF008B2E3B /* LaunchScreen.storyboard */; };
@@ -50,8 +48,6 @@
 		A52A3C5A26519C1000E8A69B /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		A5C01C67265153CC008B2E3B /* WhatCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C01C6A265153CC008B2E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5C01C6C265153CC008B2E3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5C01C6E265153CC008B2E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5C01C71265153CC008B2E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5C01C73265153CF008B2E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5C01C76265153CF008B2E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,8 +140,6 @@
 				A5C01CEB26517BA1008B2E3B /* RecipesDetails */,
 				A52A3C6026519C1600E8A69B /* Favorites */,
 				A5C01C6A265153CC008B2E3B /* AppDelegate.swift */,
-				A5C01C6C265153CC008B2E3B /* SceneDelegate.swift */,
-				A5C01C6E265153CC008B2E3B /* ViewController.swift */,
 				A5C01C70265153CC008B2E3B /* Main.storyboard */,
 				A5C01C73265153CF008B2E3B /* Assets.xcassets */,
 				A5C01C75265153CF008B2E3B /* LaunchScreen.storyboard */,
@@ -370,13 +364,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C01CD8265176C2008B2E3B /* RecipesViewCell.swift in Sources */,
-				A5C01C6F265153CC008B2E3B /* ViewController.swift in Sources */,
 				A52A3C5B26519C1000E8A69B /* FavoritesViewController.swift in Sources */,
 				A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */,
 				A5C01CE326517B9A008B2E3B /* RecipesDetailsViewController.swift in Sources */,
 				A5C01CB72651692F008B2E3B /* EnteringProductsViewController.swift in Sources */,
 				A5C01CCC2651762C008B2E3B /* RecipesViewController.swift in Sources */,
-				A5C01C6D265153CC008B2E3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7YS6H752M;
 				INFOPLIST_FILE = WhatCook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,6 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7YS6H752M;
 				INFOPLIST_FILE = WhatCook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

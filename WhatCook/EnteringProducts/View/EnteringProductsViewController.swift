@@ -16,7 +16,7 @@ class EnteringProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
 
 
