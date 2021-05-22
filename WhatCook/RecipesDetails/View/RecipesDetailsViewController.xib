@@ -43,9 +43,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1y5-cJ-RIH">
                     <rect key="frame" x="0.0" y="444" width="414" height="452"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Recip description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N0p-u6-6Xy">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Recip description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N0p-u6-6Xy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <color key="textColor" systemColor="labelColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -75,6 +74,10 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="KDk-u9-8xr" secondAttribute="bottom" id="4mo-cw-Rd7"/>
+                        <constraint firstItem="KDk-u9-8xr" firstAttribute="top" secondItem="N0p-u6-6Xy" secondAttribute="bottom" constant="8" symbolic="YES" id="4qt-6X-Ycn"/>
+                        <constraint firstItem="N0p-u6-6Xy" firstAttribute="leading" secondItem="1y5-cJ-RIH" secondAttribute="leading" id="Xpi-U8-Xej"/>
+                        <constraint firstItem="N0p-u6-6Xy" firstAttribute="top" secondItem="1y5-cJ-RIH" secondAttribute="top" id="bb6-Cc-wgH"/>
+                        <constraint firstAttribute="trailing" secondItem="N0p-u6-6Xy" secondAttribute="trailing" id="dap-Ry-JpB"/>
                         <constraint firstItem="KDk-u9-8xr" firstAttribute="leading" secondItem="1y5-cJ-RIH" secondAttribute="leading" id="iaL-a0-iL3"/>
                         <constraint firstAttribute="trailing" secondItem="KDk-u9-8xr" secondAttribute="trailing" id="xMM-QH-FS9"/>
                     </constraints>

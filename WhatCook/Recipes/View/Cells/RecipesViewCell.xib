@@ -21,8 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-cU-bb7">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-e4-Sgb">
-                                <rect key="frame" x="8" y="0.0" width="284" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-e4-Sgb">
+                                <rect key="frame" x="8" y="0.0" width="83" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                             <constraint firstAttribute="bottom" secondItem="0mz-tv-Av6" secondAttribute="bottom" id="b9o-lS-aVj"/>
                             <constraint firstItem="0mz-tv-Av6" firstAttribute="leading" secondItem="Mef-cU-bb7" secondAttribute="leading" id="pJS-5B-tLm"/>
                             <constraint firstAttribute="trailing" secondItem="Efl-Em-PMG" secondAttribute="trailing" id="ra6-Si-euH"/>
-                            <constraint firstAttribute="trailing" secondItem="Fad-e4-Sgb" secondAttribute="trailing" constant="8" id="vt4-0k-fAL"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fad-e4-Sgb" secondAttribute="trailing" constant="8" id="vt4-0k-fAL"/>
                             <constraint firstAttribute="trailing" secondItem="0mz-tv-Av6" secondAttribute="trailing" id="wZv-TK-Ymn"/>
                         </constraints>
                     </view>

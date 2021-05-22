@@ -11,8 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnteringProductsViewController" customModule="WhatCook" customModuleProvider="target">
             <connections>
-                <outlet property="enteringProductsLabel" destination="bMi-Xn-hgL" id="21R-FU-9nB"/>
-                <outlet property="enteringProductsTextField" destination="RCM-Gk-Qoq" id="7ch-AS-2x6"/>
+                <outlet property="containerView" destination="kKO-He-X8K" id="yhl-8j-H0h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="e0A-c6-TDa"/>
             </connections>
         </placeholder>
@@ -21,27 +20,38 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-Gk-Qoq">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKO-He-X8K">
+                    <rect key="frame" x="0.0" y="94" width="428" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRf-JS-eeG">
                     <rect key="frame" x="8" y="52" width="412" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet, Cheese, cucamber, skwash, potato, tomato, beetroot" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMi-Xn-hgL">
-                    <rect key="frame" x="8" y="94" width="322.66666666666669" height="40.666666666666657"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUz-dr-ian">
+                    <rect key="frame" x="16" y="836" width="396" height="56"/>
+                    <color key="backgroundColor" red="1" green="0.75005918739999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="K7x-Oo-PdB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <state key="normal" title="Search Meal"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="bMi-Xn-hgL" firstAttribute="top" secondItem="RCM-Gk-Qoq" secondAttribute="bottom" constant="8" id="Fo6-Ix-y2m"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bMi-Xn-hgL" secondAttribute="trailing" constant="8" id="MND-hI-4Tp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RCM-Gk-Qoq" secondAttribute="trailing" constant="8" id="Pwm-Ll-tL4"/>
-                <constraint firstItem="RCM-Gk-Qoq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="eex-tR-KwD"/>
-                <constraint firstItem="bMi-Xn-hgL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="mRc-NO-oiM"/>
-                <constraint firstItem="RCM-Gk-Qoq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="p6a-1a-Tzm"/>
+                <constraint firstItem="eUz-dr-ian" firstAttribute="top" secondItem="kKO-He-X8K" secondAttribute="bottom" constant="8" id="K5w-xP-kRf"/>
+                <constraint firstItem="gRf-JS-eeG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="VFO-nc-Uuv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eUz-dr-ian" secondAttribute="trailing" constant="16" id="Yy3-Pw-BmK"/>
+                <constraint firstItem="eUz-dr-ian" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dA7-rh-Jd0"/>
+                <constraint firstItem="eUz-dr-ian" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="djV-A8-C2j"/>
+                <constraint firstItem="kKO-He-X8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="j1h-FX-NcN"/>
+                <constraint firstItem="gRf-JS-eeG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="mYZ-jt-BAX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gRf-JS-eeG" secondAttribute="trailing" constant="8" id="pt2-sU-ohb"/>
+                <constraint firstItem="kKO-He-X8K" firstAttribute="top" secondItem="gRf-JS-eeG" secondAttribute="bottom" constant="8" id="qBw-qp-x6o"/>
+                <constraint firstItem="kKO-He-X8K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="txI-6m-vam"/>
             </constraints>
             <point key="canvasLocation" x="124.7663551401869" y="108.85529157667388"/>
         </view>

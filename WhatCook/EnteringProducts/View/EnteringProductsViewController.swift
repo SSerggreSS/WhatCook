@@ -7,15 +7,23 @@
 
 import UIKit
 import Foundation
+import AMTagListView
 
 class EnteringProductsViewController: UIViewController {
     
-    
-    @IBOutlet weak var enteringProductsTextField: UITextField!
-    @IBOutlet weak var enteringProductsLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    var tagListView: AMTagListView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tagListView = AMTagListView(frame: containerView.bounds)
+        tagListView.backgroundColor = .blue
+        tagListView.addTag("test tag")
+        
+        containerView.addSubview(tagListView)
+ 
+      
+            
         
     }
 
@@ -30,4 +38,8 @@ class EnteringProductsViewController: UIViewController {
     }
     */
 
+}
+
+extension EnteringProductsViewController: UIScrollViewDelegate {
+    
 }
