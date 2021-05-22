@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A52A3C5B26519C1000E8A69B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A3C5926519C1000E8A69B /* FavoritesViewController.swift */; };
+		A52A3C5C26519C1000E8A69B /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52A3C5A26519C1000E8A69B /* FavoritesViewController.xib */; };
 		A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6A265153CC008B2E3B /* AppDelegate.swift */; };
 		A5C01C6D265153CC008B2E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6C265153CC008B2E3B /* SceneDelegate.swift */; };
 		A5C01C6F265153CC008B2E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6E265153CC008B2E3B /* ViewController.swift */; };
@@ -16,6 +18,14 @@
 		A5C01C82265153CF008B2E3B /* WhatCookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C81265153CF008B2E3B /* WhatCookTests.swift */; };
 		A5C01C8D265153CF008B2E3B /* WhatCookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C8C265153CF008B2E3B /* WhatCookUITests.swift */; };
 		A5C01C9E2651545C008B2E3B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A5C01C9D2651545C008B2E3B /* .gitignore */; };
+		A5C01CB72651692F008B2E3B /* EnteringProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01CB52651692F008B2E3B /* EnteringProductsViewController.swift */; };
+		A5C01CB82651692F008B2E3B /* EnteringProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C01CB62651692F008B2E3B /* EnteringProductsViewController.xib */; };
+		A5C01CCC2651762C008B2E3B /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01CCA2651762C008B2E3B /* RecipesViewController.swift */; };
+		A5C01CCD2651762C008B2E3B /* RecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C01CCB2651762C008B2E3B /* RecipesViewController.xib */; };
+		A5C01CD8265176C2008B2E3B /* RecipesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01CD6265176C2008B2E3B /* RecipesViewCell.swift */; };
+		A5C01CD9265176C2008B2E3B /* RecipesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C01CD7265176C2008B2E3B /* RecipesViewCell.xib */; };
+		A5C01CE326517B9A008B2E3B /* RecipesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01CE126517B9A008B2E3B /* RecipesDetailsViewController.swift */; };
+		A5C01CE426517B9A008B2E3B /* RecipesDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C01CE226517B9A008B2E3B /* RecipesDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A52A3C5926519C1000E8A69B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		A52A3C5A26519C1000E8A69B /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		A5C01C67265153CC008B2E3B /* WhatCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C01C6A265153CC008B2E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C01C6C265153CC008B2E3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +63,14 @@
 		A5C01C8C265153CF008B2E3B /* WhatCookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatCookUITests.swift; sourceTree = "<group>"; };
 		A5C01C8E265153CF008B2E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C01C9D2651545C008B2E3B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A5C01CB52651692F008B2E3B /* EnteringProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringProductsViewController.swift; sourceTree = "<group>"; };
+		A5C01CB62651692F008B2E3B /* EnteringProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnteringProductsViewController.xib; sourceTree = "<group>"; };
+		A5C01CCA2651762C008B2E3B /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		A5C01CCB2651762C008B2E3B /* RecipesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesViewController.xib; sourceTree = "<group>"; };
+		A5C01CD6265176C2008B2E3B /* RecipesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewCell.swift; sourceTree = "<group>"; };
+		A5C01CD7265176C2008B2E3B /* RecipesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesViewCell.xib; sourceTree = "<group>"; };
+		A5C01CE126517B9A008B2E3B /* RecipesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDetailsViewController.swift; sourceTree = "<group>"; };
+		A5C01CE226517B9A008B2E3B /* RecipesDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A52A3C6026519C1600E8A69B /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				A52A3C6126519C2100E8A69B /* View */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		A52A3C6126519C2100E8A69B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A52A3C5926519C1000E8A69B /* FavoritesViewController.swift */,
+				A52A3C5A26519C1000E8A69B /* FavoritesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A5C01C5E265153CC008B2E3B = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +139,10 @@
 		A5C01C69265153CC008B2E3B /* WhatCook */ = {
 			isa = PBXGroup;
 			children = (
+				A5C01CB4265168F5008B2E3B /* EnteringProducts */,
+				A5C01CD126517634008B2E3B /* Recipes */,
+				A5C01CEB26517BA1008B2E3B /* RecipesDetails */,
+				A52A3C6026519C1600E8A69B /* Favorites */,
 				A5C01C6A265153CC008B2E3B /* AppDelegate.swift */,
 				A5C01C6C265153CC008B2E3B /* SceneDelegate.swift */,
 				A5C01C6E265153CC008B2E3B /* ViewController.swift */,
@@ -129,6 +170,67 @@
 				A5C01C8E265153CF008B2E3B /* Info.plist */,
 			);
 			path = WhatCookUITests;
+			sourceTree = "<group>";
+		};
+		A5C01CB4265168F5008B2E3B /* EnteringProducts */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CBC2651693B008B2E3B /* View */,
+			);
+			path = EnteringProducts;
+			sourceTree = "<group>";
+		};
+		A5C01CBC2651693B008B2E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CB62651692F008B2E3B /* EnteringProductsViewController.xib */,
+				A5C01CB52651692F008B2E3B /* EnteringProductsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5C01CD126517634008B2E3B /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CD226517649008B2E3B /* View */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		A5C01CD226517649008B2E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CDD265176C8008B2E3B /* Cells */,
+				A5C01CCA2651762C008B2E3B /* RecipesViewController.swift */,
+				A5C01CCB2651762C008B2E3B /* RecipesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5C01CDD265176C8008B2E3B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CD6265176C2008B2E3B /* RecipesViewCell.swift */,
+				A5C01CD7265176C2008B2E3B /* RecipesViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A5C01CEB26517BA1008B2E3B /* RecipesDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CEF26517BB7008B2E3B /* View */,
+			);
+			path = RecipesDetails;
+			sourceTree = "<group>";
+		};
+		A5C01CEF26517BB7008B2E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5C01CE126517B9A008B2E3B /* RecipesDetailsViewController.swift */,
+				A5C01CE226517B9A008B2E3B /* RecipesDetailsViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +338,12 @@
 			files = (
 				A5C01C9E2651545C008B2E3B /* .gitignore in Resources */,
 				A5C01C77265153CF008B2E3B /* LaunchScreen.storyboard in Resources */,
+				A5C01CE426517B9A008B2E3B /* RecipesDetailsViewController.xib in Resources */,
+				A5C01CCD2651762C008B2E3B /* RecipesViewController.xib in Resources */,
+				A52A3C5C26519C1000E8A69B /* FavoritesViewController.xib in Resources */,
 				A5C01C74265153CF008B2E3B /* Assets.xcassets in Resources */,
+				A5C01CD9265176C2008B2E3B /* RecipesViewCell.xib in Resources */,
+				A5C01CB82651692F008B2E3B /* EnteringProductsViewController.xib in Resources */,
 				A5C01C72265153CC008B2E3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C01CD8265176C2008B2E3B /* RecipesViewCell.swift in Sources */,
 				A5C01C6F265153CC008B2E3B /* ViewController.swift in Sources */,
+				A52A3C5B26519C1000E8A69B /* FavoritesViewController.swift in Sources */,
 				A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */,
+				A5C01CE326517B9A008B2E3B /* RecipesDetailsViewController.swift in Sources */,
+				A5C01CB72651692F008B2E3B /* EnteringProductsViewController.swift in Sources */,
+				A5C01CCC2651762C008B2E3B /* RecipesViewController.swift in Sources */,
 				A5C01C6D265153CC008B2E3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -450,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sergeybey17-gmail.com.WhatCook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,7 +581,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sergeybey17-gmail.com.WhatCook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

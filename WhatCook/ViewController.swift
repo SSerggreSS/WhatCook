@@ -11,7 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "EnteringProductsViewController", bundle: bundle)
+        let view = nib.instantiate(withOwner: EnteringProductsViewController.self, options: nil).first as! UIView
+        self.view = view
     }
 
 
