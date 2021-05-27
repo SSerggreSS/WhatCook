@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipesDetailsImageViewCell" rowHeight="214" id="KGk-i7-Jjw" customClass="RecipesDetailsImageViewCell" customModule="WhatCook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fish" translatesAutoresizingMaskIntoConstraints="NO" id="7Tx-X9-4Nb">
+                        <rect key="frame" x="8" y="8" width="304" height="198"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-CD-WSA">
+                        <rect key="frame" x="0.0" y="162" width="320" height="44"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CI-1n-FD0">
+                                <rect key="frame" x="282.5" y="8" width="29.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8CI-1n-FD0" secondAttribute="height" multiplier="22:21" id="yow-WX-Wm1"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.75005918739999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-Sw-B8o">
+                                <rect key="frame" x="8" y="8" width="86" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="y9V-Sw-B8o" secondAttribute="bottom" constant="8" id="1r5-q8-FQu"/>
+                            <constraint firstAttribute="height" constant="44" id="9zN-zE-VCd"/>
+                            <constraint firstItem="8CI-1n-FD0" firstAttribute="top" secondItem="lNS-CD-WSA" secondAttribute="top" constant="8" id="EL8-2v-Abb"/>
+                            <constraint firstItem="y9V-Sw-B8o" firstAttribute="top" secondItem="lNS-CD-WSA" secondAttribute="top" constant="8" id="XMm-AO-F1F"/>
+                            <constraint firstAttribute="trailing" secondItem="8CI-1n-FD0" secondAttribute="trailing" constant="8" id="k02-Rt-v9u"/>
+                            <constraint firstAttribute="bottom" secondItem="8CI-1n-FD0" secondAttribute="bottom" constant="8" id="olq-yJ-CEV"/>
+                            <constraint firstItem="y9V-Sw-B8o" firstAttribute="leading" secondItem="lNS-CD-WSA" secondAttribute="leading" constant="8" id="p30-eo-Qpu"/>
+                            <constraint firstItem="8CI-1n-FD0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y9V-Sw-B8o" secondAttribute="trailing" constant="8" id="uCj-ql-AKK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Tx-X9-4Nb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="46d-Of-b31"/>
+                    <constraint firstItem="7Tx-X9-4Nb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8RE-bN-mIa"/>
+                    <constraint firstItem="lNS-CD-WSA" firstAttribute="bottom" secondItem="7Tx-X9-4Nb" secondAttribute="bottom" id="9B2-Cm-HyQ"/>
+                    <constraint firstItem="lNS-CD-WSA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CsS-x4-JfR"/>
+                    <constraint firstAttribute="trailing" secondItem="lNS-CD-WSA" secondAttribute="trailing" id="Y3C-an-tb2"/>
+                    <constraint firstAttribute="trailing" secondItem="7Tx-X9-4Nb" secondAttribute="trailing" constant="8" id="b0b-An-KNk"/>
+                    <constraint firstAttribute="bottom" secondItem="7Tx-X9-4Nb" secondAttribute="bottom" constant="8" id="q07-KK-q5L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteButton" destination="8CI-1n-FD0" id="TVW-l4-qiG"/>
+                <outlet property="nameMealLabel" destination="y9V-Sw-B8o" id="7lM-mi-b7E"/>
+                <outlet property="recipesImageView" destination="7Tx-X9-4Nb" id="ES3-Na-cHx"/>
+            </connections>
+            <point key="canvasLocation" x="56.521739130434788" y="99.107142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fish" width="800" height="533"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
