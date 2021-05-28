@@ -9,9 +9,11 @@ import UIKit
 
 class RecipesViewController: UIViewController {
 
+    @IBOutlet weak var recipesCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        recipesCollectionView?.backgroundColor = .red
         // Do any additional setup after loading the view.
     }
 
