@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let recipesViewController = RecipesViewController()
-        window?.rootViewController = recipesViewController
+        let favorites = FavoritesViewController()
+        window?.rootViewController = favorites
         window?.makeKeyAndVisible()
         return true
     }
