@@ -7,5 +7,11 @@
 
 import Foundation
 
+//MARK: - TableViewCell
+
 let identDescriptionCell = "DescriptionRecipesTableCellView"
 let identRecipesDetailsCell = "RecipesDetailsImageViewCell"
+
+//MARK: - CollectionViewCell
+
+let identRecipeCell = "RecipesViewCell"

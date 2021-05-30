@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let recipeViewController = RecipesDetailsViewController()
-        window?.rootViewController = recipeViewController
+        let recipesViewController = RecipesViewController()
+        window?.rootViewController = recipesViewController
         window?.makeKeyAndVisible()
         return true
     }
