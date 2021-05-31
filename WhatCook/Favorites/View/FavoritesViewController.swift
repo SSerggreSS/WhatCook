@@ -11,6 +11,8 @@ class FavoritesViewController: UIViewController {
 
     @IBOutlet weak var favoritesCollectionView: UICollectionView!
     
+    var presenter: FavoritesViewControllerOutput?
+    
     let sectionEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class FavoritesViewController: UIViewController {
 //MARK: - UICollectionViewDataSource
 
 extension FavoritesViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         4
@@ -43,6 +46,10 @@ extension FavoritesViewController: UICollectionViewDataSource {
 //MARK: - UICollectionViewDelegateFlowLayout
 
 extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.selectedCellBy(indexPath: indexPath)
+    }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
