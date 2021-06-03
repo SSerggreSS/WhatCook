@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol FavoritesViewControllerRouterInput: class  {
+    func moveToDetails(recipe: Recipe)
+}
+
 class FavoritesViewControllerRouter {
     var routerController = UIViewController()
     var factory: RecipeDetailsViewControllerFactory?

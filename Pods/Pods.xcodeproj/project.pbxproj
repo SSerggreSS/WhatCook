@@ -119,10 +119,10 @@
 		4A2DEB39DFC74EB9AB3B5E6D8A71679E /* AMTag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMTag.h; path = Source/AMTag.h; sourceTree = "<group>"; };
 		4EEE1C3F3B5D619976C4BE9A99208DD2 /* Container.Arguments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.Arguments.swift; path = Sources/Container.Arguments.swift; sourceTree = "<group>"; };
 		5A6A9EAAF60464070CD4DF2D7B070397 /* Pods-WhatCook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhatCook-acknowledgements.plist"; sourceTree = "<group>"; };
-		5CE5D360E78A7DC94F87A2AD5BBDC11E /* Pods_WhatCookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WhatCookTests.framework; path = "Pods-WhatCookTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE5D360E78A7DC94F87A2AD5BBDC11E /* Pods_WhatCookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatCookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA0017E78400D95C960727652FFDBF0 /* InstanceWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstanceWrapper.swift; path = Sources/InstanceWrapper.swift; sourceTree = "<group>"; };
 		5EAF1FF7A40147774DF9C50890AA15F3 /* AMTagListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMTagListView.m; path = Source/AMTagListView.m; sourceTree = "<group>"; };
-		5FA6A1B9F82F742AB5FA9F836464D672 /* AMTagListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMTagListView.framework; path = AMTagListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA6A1B9F82F742AB5FA9F836464D672 /* AMTagListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AMTagListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6035CACE06A6EC5A07811570A005A6EC /* Pods-WhatCook-WhatCookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatCook-WhatCookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		64F91C9E59D103AF9EFAF038F2B93ED2 /* Swinject-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-prefix.pch"; sourceTree = "<group>"; };
 		660F078F16A08DA88A79238FD8507CF3 /* Pods-WhatCook-WhatCookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatCook-WhatCookUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,11 +137,11 @@
 		7B69517F153C574AC5B95337CB0C53AA /* Pods-WhatCookTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhatCookTests.modulemap"; sourceTree = "<group>"; };
 		8536A39D579C2BE49ABA6A3742F12175 /* Pods-WhatCookTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhatCookTests-Info.plist"; sourceTree = "<group>"; };
 		85756FED37AF19BCEBA08EBBABB7D4B2 /* Pods-WhatCookTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhatCookTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Swinject.framework; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CA90EA8914D27D3236E03CACA72D360 /* Pods_WhatCook_WhatCookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WhatCook_WhatCookUITests.framework; path = "Pods-WhatCook-WhatCookUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA90EA8914D27D3236E03CACA72D360 /* Pods_WhatCook_WhatCookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatCook_WhatCookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9270BA3DC2D9AD0730AC33368DCE6F3B /* Pods-WhatCook-WhatCookUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhatCook-WhatCookUITests-Info.plist"; sourceTree = "<group>"; };
-		97A060D6B769C97E42FEC194F36269E3 /* Pods_WhatCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WhatCook.framework; path = "Pods-WhatCook.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97A060D6B769C97E42FEC194F36269E3 /* Pods_WhatCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E498F67B04DEA6708053F159CA5C8DD /* Swinject-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Swinject-Info.plist"; sourceTree = "<group>"; };
 		A765B5CC2FFFFA83CB44531FAAF0E583 /* Pods-WhatCook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhatCook.release.xcconfig"; sourceTree = "<group>"; };
 		A9553293786723724A98686D0B7346B1 /* FunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionType.swift; path = Sources/FunctionType.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		58F571D61297DF74850203867BC0D3FD /* Support Files */ = {
+		58F571D61297DF74850203867BC0D3FD /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
 				03B456636D2358EC15D621004FF0BB16 /* Swinject.modulemap */,
@@ -250,7 +250,7 @@
 				F506F791F26158FFF27E7FC13BDC9E27 /* Swinject.debug.xcconfig */,
 				3E8A24B3A8D313D197A4C6B833C62F46 /* Swinject.release.xcconfig */,
 			);
-			name = "Support Files";
+			name = SupportFiles;
 			path = "../Target Support Files/Swinject";
 			sourceTree = "<group>";
 		};
@@ -297,9 +297,8 @@
 				C3C9B25EAC12FAEAE27220ABA1C1244D /* SynchronizedResolver.swift */,
 				EE216DFBC3A6C475BF06D5D4B9AD9B1F /* SynchronizedResolver.Arguments.swift */,
 				B699ABB7CCDC63A753BC58EC201EB3D3 /* UnavailableItems.swift */,
-				58F571D61297DF74850203867BC0D3FD /* Support Files */,
+				58F571D61297DF74850203867BC0D3FD /* SupportFiles */,
 			);
-			name = Swinject;
 			path = Swinject;
 			sourceTree = "<group>";
 		};
@@ -340,7 +339,6 @@
 				B33BBDD98E5493E1BC7920683E798847 /* AMTagView.m */,
 				B9E8DCE40782A4CDC84C5E9BE8A9A99B /* Support Files */,
 			);
-			name = AMTagListView;
 			path = AMTagListView;
 			sourceTree = "<group>";
 		};

@@ -1,13 +1,22 @@
 //
-//  ViewControllerFactory.swift
+//  ViewControllersFactory.swift
 //  WhatCook
 //
 //  Created by Сергей  Бей on 01.06.2021.
 //
 
 import Foundation
+import Swinject
 
-class ViewControllerFactory { }
+class ViewControllerFactory {
+    var container: Container!
+    
+    init(container: Container) {
+        self.container = container
+    }
+}
+
+//MARK: - RecipeDetailsViewControllerFactory
 
 protocol RecipeDetailsViewControllerFactory {
     func recipeDetailsViewController() -> RecipesDetailsViewController
@@ -15,9 +24,11 @@ protocol RecipeDetailsViewControllerFactory {
 
 extension ViewControllerFactory: RecipeDetailsViewControllerFactory {
     func recipeDetailsViewController() -> RecipesDetailsViewController {
-        let recipeDetailsViewController = RecipesDetailsViewController()
-        return recipeDetailsViewController
+        return container.resolve(RecipesDetailsViewController.self)!
     }
 }
+
+
+
 
 

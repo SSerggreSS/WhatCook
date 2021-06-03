@@ -7,11 +7,24 @@
 
 import Foundation
 
+//этот протокол реализует презентер чтобы получать от вью сообщения
+protocol FavoritesPresenterInput {
+    func viewIsRedy()
+}
+
 class FavoritesPresenter {
-    
+    var view: FavoritesViewControllerInput?
     var router: FavoritesViewControllerRouterInput?
     var recipes = [Recipe(id: 0, name: "Asorted Vigitables", description: "Go Cook")]
     
+}
+
+//MARK: - FavoritesPresenterInput
+
+extension FavoritesPresenter: FavoritesPresenterInput {
+    func viewIsRedy() {
+        print("View ask - get data!!!")
+    }
 }
 
 extension FavoritesPresenter: FavoritesViewControllerOutput {
