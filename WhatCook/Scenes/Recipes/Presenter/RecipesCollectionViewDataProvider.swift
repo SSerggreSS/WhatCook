@@ -13,18 +13,31 @@ protocol RecipesCollectionViewDataProviderProtocol {
     func cellForRow(at indexPath: IndexPath) -> RecipeCollectionCellPresenter
 }
 
-class RecipeCollectionViewDataProvider: RecipesCollectionViewDataProviderProtocol {
+class RecipeCollectionDataProvider {
+    private var presenters: [RecipeCollectionCellPresenter] = []
+}
+
+extension RecipeCollectionDataProvider: RecipesCollectionViewDataProviderProtocol {
     var numberOfSections: Int {
         return 1
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return recipePresenters.count
+        return presenters.count
     }
     
     func cellForRow(at indexPath: IndexPath) -> RecipeCollectionCellPresenter {
-        return RecipeCollectionCellPresenter()
+        return RecipeCollectionCellPresenter(recipe: Recipe(id: 0, name: "dodat", description: "bla bla"))
     }
     
-    private let recipePresenters: [RecipeCollectionCellPresenter] = []
+}
+
+protocol RecipeCollectionDataProtocol {
+    func updateCellPresenters(_ presenters: [RecipeCollectionCellPresenter])
+}
+
+extension RecipeCollectionDataProvider: RecipeCollectionDataProtocol {
+    func updateCellPresenters(_ presenters: [RecipeCollectionCellPresenter]) {
+        self.presenters = presenters
+    }
 }

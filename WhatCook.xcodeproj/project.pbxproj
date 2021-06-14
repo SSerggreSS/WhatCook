@@ -20,6 +20,7 @@
 		A54696C42677578900EA0DBD /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54696C32677578900EA0DBD /* NibReusable.swift */; };
 		A54696C9267757AC00EA0DBD /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54696C8267757AC00EA0DBD /* NibLoadable.swift */; };
 		A5471649267141AD00965C1E /* RecipeProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5471648267141AD00965C1E /* RecipeProviderProtocol.swift */; };
+		A54CD1932677DCC700B6D185 /* CellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD1922677DCC700B6D185 /* CellPresenter.swift */; };
 		A558E2C4266419F40081B1BA /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */; };
 		A5ABA3B32673CCBA0051C15F /* RecipesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABA3B22673CCBA0051C15F /* RecipesConfigurator.swift */; };
 		A5ABA3BA2673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABA3B92673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift */; };
@@ -93,6 +94,7 @@
 		A54696C32677578900EA0DBD /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
 		A54696C8267757AC00EA0DBD /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		A5471648267141AD00965C1E /* RecipeProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeProviderProtocol.swift; sourceTree = "<group>"; };
+		A54CD1922677DCC700B6D185 /* CellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresenter.swift; sourceTree = "<group>"; };
 		A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		A5ABA3B22673CCBA0051C15F /* RecipesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesConfigurator.swift; sourceTree = "<group>"; };
 		A5ABA3B92673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewDataProvider.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				A5ABA3C92673CF8C0051C15F /* Reusable.swift */,
 				A54696C32677578900EA0DBD /* NibReusable.swift */,
 				A54696C8267757AC00EA0DBD /* NibLoadable.swift */,
+				A54CD1922677DCC700B6D185 /* CellPresenter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				A5EA1FE0266E748E003B9389 /* ControllersFactory.swift in Sources */,
 				A5EBEB1A26656D1B00AF709C /* ViewControllerFactory.swift in Sources */,
 				A5ABA3C42673CE9E0051C15F /* RecipeCollectionCellPresenter.swift in Sources */,
+				A54CD1932677DCC700B6D185 /* CellPresenter.swift in Sources */,
 				A5D4C6F026773BE80045D47B /* RecipeViewControllerOutput.swift in Sources */,
 				A5C01CCC2651762C008B2E3B /* RecipesViewController.swift in Sources */,
 				A5BACADF26693DB300A3CABA /* RecipesProvider.swift in Sources */,

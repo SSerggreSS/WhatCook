@@ -31,8 +31,9 @@ class RecipesConfigurator: Configurator {
         let dataProvider = collectionDataProviderFactory.createDataProvider()
         
         let presenter = RecipePresenter(collectionData: dataProvider)
-        let recipeViewController = RecipesViewController(presenter: presenter, dataProvider: dataProvider as! RecipesCollectionViewDataProviderProtocol)
+        let recipeViewController = RecipesViewController(presenter: presenter, dataProvider: dataProvider)
         presenter.viewController = recipeViewController
-        return UIViewController()
+        let navigationController = UINavigationController(rootViewController: recipeViewController)
+        return navigationController
     }
 }

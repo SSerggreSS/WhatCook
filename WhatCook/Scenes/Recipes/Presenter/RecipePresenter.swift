@@ -8,13 +8,13 @@
 import Foundation
 
 class RecipePresenter {
-    let collectionData: RecipeCollectionDataProtocol
+    let collectionData: RecipeCollectionDataProvider
     private var cellPresenters: [RecipeCollectionCellPresenter] = []
     private var title = "Recipe"
     
     var viewController: RecipeViewControllerInput?
     
-    init(collectionData: RecipeCollectionDataProtocol) {
+    init(collectionData: RecipeCollectionDataProvider) {
         self.collectionData = collectionData
     }
 }

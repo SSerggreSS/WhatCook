@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let favorites = FavoritesViewController()
-        window?.rootViewController = favorites
+        let configurator = appService.start()
+        window?.rootViewController = configurator.configure()
         window?.makeKeyAndVisible()
         return true
     }

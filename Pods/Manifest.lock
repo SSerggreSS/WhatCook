@@ -1,20 +1,30 @@
 PODS:
   - AMTagListView (1.5.0)
+  - Realm (10.7.7):
+    - Realm/Headers (= 10.7.7)
+  - Realm/Headers (10.7.7)
+  - RealmSwift (10.7.7):
+    - Realm (= 10.7.7)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
   - AMTagListView
+  - RealmSwift
   - Swinject
 
 SPEC REPOS:
   trunk:
     - AMTagListView
+    - Realm
+    - RealmSwift
     - Swinject
 
 SPEC CHECKSUMS:
   AMTagListView: 08ab67466c67152f6299bc29a13a907783b0046f
+  Realm: 8010af8b7a576ba501729bcbc54a3cd1f1f7dca3
+  RealmSwift: dc17e6d649c12a8996f9e962c3fe6cef356885c4
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 6e4aae145568175df73148a40693da6b608212b3
+PODFILE CHECKSUM: cbaac3a8f9af6bc0c7d91e61f1f32028aee1ebe7
 
 COCOAPODS: 1.10.1

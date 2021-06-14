@@ -20,7 +20,7 @@ class RecipesViewController: UIViewController {
         self.init()
         self.presenter = presenter
         self.collectionViewDataSource = CollectionViewDataSource(dataProvider: dataProvider)
-        
+    
         
     }
     

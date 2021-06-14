@@ -6,6 +6,7 @@ target 'WhatCook' do
   use_frameworks!
   pod 'AMTagListView'
   pod 'Swinject'
+  pod 'RealmSwift'
   # Pods for WhatCook
 
   target 'WhatCookTests' do
