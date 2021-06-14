@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecipesViewCell: UICollectionViewCell {
+class RecipesViewCell: UICollectionViewCell, Reusable {
 
     @IBOutlet weak var foodDishNameLabel: UILabel!
     @IBOutlet weak var foodDishImageView: UIImageView!

@@ -8,11 +8,15 @@
 import Foundation
 import UIKit
 
-//class FavoritesConfigurator {
+//class FavoritesModuleConfigurator {
+//    
 //    private let favoritesProvider: FavoritesProvider
 //    //private let cellPresentersFactory: FavoritesCellPresentersFactory
 //    
-//    func configure() -> UIViewController {
+//    static func configure(router: FavoritesViewControllerRouter) -> UIViewController {
+//        let favoritesController = FavoritesViewController()
+//        let router = FavoritesViewControllerRouter(detailsFactory: RecipeDetailsViewControllerFactory)
+//        
 //        let presenter = FavoritesPresenter()
 //    }
 //    

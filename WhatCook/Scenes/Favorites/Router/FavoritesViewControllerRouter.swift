@@ -13,6 +13,13 @@ protocol FavoritesViewControllerRouterInput: class  {
 }
 
 class FavoritesViewControllerRouter {
+    
+    var recipeDetailsFactory: RecipeDetailsViewControllerFactory!
+    
+    init(recipeDetailsFactory: RecipeDetailsViewControllerFactory) {
+        self.recipeDetailsFactory = recipeDetailsFactory
+    }
+    
     var routerController = UIViewController()
     var factory: RecipeDetailsViewControllerFactory?
 }
