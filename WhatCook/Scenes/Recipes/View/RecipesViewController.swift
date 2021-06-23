@@ -67,11 +67,8 @@ extension RecipesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let widthPerItem: CGFloat = 100
         let heightPerItem: CGFloat = 100
-    
-        
         return CGSize(width: widthPerItem, height: heightPerItem)
     }
     
@@ -95,8 +92,6 @@ private extension RecipesViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: presenter.reusableType.reusableIdentifier, for: indexPath)
             return cell
         }
-        
-        
     }
 }
 

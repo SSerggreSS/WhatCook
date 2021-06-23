@@ -12,7 +12,7 @@ import UIKit
 class ServiceAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RecipeProviderProtocol.self) { _ in
-            return RecipesProviderMock()
+            return RecipesProvider()
         }
     }
 }

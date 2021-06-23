@@ -15,8 +15,7 @@ protocol FavoritesPresenterInput {
 class FavoritesPresenter {
     var view: FavoritesViewControllerInput?
     var router: FavoritesViewControllerRouterInput?
-    var recipes = [Recipe(id: 0, name: "Asorted Vigitables", description: "Go Cook")]
-    
+    var recipes = [Recipe(name: "Asorted Vigitables")]
 }
 
 //MARK: - FavoritesPresenterInput

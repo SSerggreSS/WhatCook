@@ -27,7 +27,7 @@ extension RecipeCollectionDataProvider: RecipesCollectionViewDataProviderProtoco
     }
     
     func cellForRow(at indexPath: IndexPath) -> RecipeCollectionCellPresenter {
-        return RecipeCollectionCellPresenter(recipe: Recipe(id: 0, name: "dodat", description: "bla bla"))
+        return RecipeCollectionCellPresenter(recipe: Recipe(name: "Bla"))
     }
     
 }

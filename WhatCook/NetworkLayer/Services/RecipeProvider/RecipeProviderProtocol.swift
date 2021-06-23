@@ -12,6 +12,6 @@ enum RecipeProviderError: Error {
 }
 
 protocol RecipeProviderProtocol {
-    func requestAll(completion: @escaping (Result<[Recipe], RecipeProviderError>) -> Void)
+    func requestAll(completion: @escaping (Result<RecipeApiResponse, RecipeProviderError>) -> Void)
     func update(recipe: Recipe, complition: @escaping (Result<(), RecipeProviderError>) -> Void)
 }
