@@ -60,7 +60,7 @@ extension RecipeApi: EndPointType {
     
     var headers: HTTPHeaders? {
         let headers = [
-            "x-rapidapi-key": "",
+            "x-rapidapi-key": "a604cd09b2msha393af041efae88p1588a5jsn7ccad1119372",
             "x-rapidapi-host": "tasty.p.rapidapi.com"
         ]
         return headers

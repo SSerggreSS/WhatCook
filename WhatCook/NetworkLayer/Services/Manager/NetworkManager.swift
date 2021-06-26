@@ -8,6 +8,7 @@
 import Foundation
 
 class NetworkManager {
+    
     static let environment: NetworkEnvironment = .production
     static let recipeAPIKey = ""
     private let router = Router<RecipeApi>()

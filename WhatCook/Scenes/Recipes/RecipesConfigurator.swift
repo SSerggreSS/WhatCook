@@ -30,9 +30,10 @@ class RecipesConfigurator: Configurator {
     func configure() -> UIViewController {
         let dataProvider = collectionDataProviderFactory.createDataProvider()
         
-        let presenter = RecipePresenter(collectionData: dataProvider)
+        let presenter = RecipesPresenter(collectionData: dataProvider,
+                                         recipePresentorFactory: cellPresenterFactory)
         let recipeViewController = RecipesViewController(presenter: presenter, dataProvider: dataProvider)
-        presenter.viewController = recipeViewController
+        presenter.view = recipeViewController
         let navigationController = UINavigationController(rootViewController: recipeViewController)
         return navigationController
     }

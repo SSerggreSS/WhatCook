@@ -14,15 +14,20 @@ class ServiceAssembly: Assembly {
         container.register(RecipeProviderProtocol.self) { _ in
             return RecipesProvider()
         }
+        container.register(ImageUploadServiceProtocol.self) { _ in
+            return ImageUploadService()
+        }
     }
 }
 
 class ConfiguratorAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RecipesConfigurator.self) { resolver in
-            RecipesConfigurator(recipesProvider: resolver.resolve(RecipeProviderProtocol.self)! ,
-                                collectionDataProviderFactory: resolver.resolve(RecipesCollectionDataProviderFactoryProtocol.self)!,
-                                cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!)
+            RecipesConfigurator(
+                recipesProvider: resolver.resolve(RecipeProviderProtocol.self)! ,
+                collectionDataProviderFactory: resolver.resolve(RecipesCollectionDataProviderFactoryProtocol.self)!,
+                cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!
+            )
         }
     }
 }

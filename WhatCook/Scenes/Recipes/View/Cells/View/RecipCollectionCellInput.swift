@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RecipeCollectionCellInput: AnyObject {
+    /// Обновить заголовок
     func updateTitle(text: String)
-    func updateCompletionState(isCompleted: Bool)
+    
+    /// Обновить картинку еды
+    func updateMeal(image: UIImage?)
 }

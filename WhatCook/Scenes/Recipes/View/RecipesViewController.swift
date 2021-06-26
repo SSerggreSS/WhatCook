@@ -14,6 +14,7 @@ class RecipesViewController: UIViewController {
     private var collectionViewDataSource: CollectionViewDataSource?
     let sectionEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var dataWasRequestedFromTheServer = false
+    let mainQueue = DispatchQueue.main
     
     convenience init(presenter: RecipeViewControllerOutput,
                      dataProvider: RecipesCollectionViewDataProviderProtocol) {
@@ -27,29 +28,15 @@ class RecipesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         recipesCollectionView?.backgroundColor = .red
-        recipesCollectionView.dataSource = self
+        recipesCollectionView.dataSource = collectionViewDataSource
         recipesCollectionView.delegate = self
-        let nib = UINib(nibName: identRecipeCell, bundle: nil)
-        recipesCollectionView.register(nib, forCellWithReuseIdentifier: identRecipeCell)
+        let nib = UINib(nibName: RecipesViewCell.reusableIdentifier, bundle: nil)
+        recipesCollectionView.register(nib, forCellWithReuseIdentifier: RecipesViewCell.reusableIdentifier)
+        presenter?.viewIsReady()
     }
     
 }
 
-//MARK: - UICollectionViewDataSource
-
-extension RecipesViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identRecipeCell, for: indexPath)
-        return cell
-    }
-    
-}
 
 //MARK: - UICollectionViewDelegateFlowLayout
 
@@ -81,6 +68,7 @@ private extension RecipesViewController {
         
         init(dataProvider: RecipesCollectionViewDataProviderProtocol) {
             self.dataProvider = dataProvider
+            print(dataProvider.numberOfRows(in: 0))
         }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -89,15 +77,27 @@ private extension RecipesViewController {
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let presenter = dataProvider.cellForRow(at: indexPath)
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: presenter.reusableType.reusableIdentifier, for: indexPath)
+            guard let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: presenter.reusableType.reusableIdentifier,
+                    for: indexPath
+            ) as? RecipesViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configureWith(presenter)
             return cell
         }
     }
 }
 
 extension RecipesViewController: RecipeViewControllerInput {
+    func show(recipes: [Recipe]) {
+
+    }
+    
     func reloadData() {
-        recipesCollectionView.reloadData()
+        mainQueue.async {
+            self.recipesCollectionView.reloadData()
+        }
     }
     
     func updateTitle(_ text: String) {

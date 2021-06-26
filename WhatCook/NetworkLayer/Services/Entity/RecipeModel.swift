@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct RecipeApiResponse {
     let numberOfResults: Int
     let recipes: [Recipe]
@@ -15,6 +14,21 @@ struct RecipeApiResponse {
 
 struct Recipe: Decodable {
     let name: String
+    let imageUrl: String
+}
+
+extension Recipe {
+    private enum RecipeCodingKeys: String, CodingKey {
+        case name = "name"
+       case imageUrl = "thumbnail_url"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: RecipeCodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        imageUrl = try container.decode(String.self, forKey: .imageUrl)
+    }
+    
 }
 
 extension RecipeApiResponse: Decodable {
@@ -31,3 +45,4 @@ extension RecipeApiResponse: Decodable {
     }
     
 }
+

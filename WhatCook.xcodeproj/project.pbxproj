@@ -29,6 +29,8 @@
 		A54C324D26812B3E00F0A9BE /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C324C26812B3E00F0A9BE /* URLParameterEncoder.swift */; };
 		A54CD1932677DCC700B6D185 /* CellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD1922677DCC700B6D185 /* CellPresenter.swift */; };
 		A55594A12680F29C00B311EA /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55594A02680F29C00B311EA /* EndPointType.swift */; };
+		A558B8292687C244004C8A68 /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558B8282687C244004C8A68 /* ImageUploadService.swift */; };
+		A558B82E2687C956004C8A68 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558B82D2687C956004C8A68 /* ServiceFactory.swift */; };
 		A558E2C4266419F40081B1BA /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */; };
 		A559B0D926826EA600DBAB93 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559B0D826826EA600DBAB93 /* Router.swift */; };
 		A55C1F1C2681AB2900E06DAF /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C1F1B2681AB2900E06DAF /* JSONParameterEncoder.swift */; };
@@ -62,7 +64,7 @@
 		A5C01CE326517B9A008B2E3B /* RecipesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01CE126517B9A008B2E3B /* RecipesDetailsViewController.swift */; };
 		A5C01CE426517B9A008B2E3B /* RecipesDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C01CE226517B9A008B2E3B /* RecipesDetailsViewController.xib */; };
 		A5D4C6E1267731CE0045D47B /* RecipeCellPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4C6E0267731CE0045D47B /* RecipeCellPresenterFactory.swift */; };
-		A5D4C6E6267735330045D47B /* RecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4C6E5267735330045D47B /* RecipePresenter.swift */; };
+		A5D4C6E6267735330045D47B /* RecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4C6E5267735330045D47B /* RecipesPresenter.swift */; };
 		A5D4C6EB2677369A0045D47B /* RecipeViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4C6EA2677369A0045D47B /* RecipeViewControllerInput.swift */; };
 		A5D4C6F026773BE80045D47B /* RecipeViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4C6EF26773BE80045D47B /* RecipeViewControllerOutput.swift */; };
 		A5EA1FD8266E7044003B9389 /* ControllerAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA1FD7266E7044003B9389 /* ControllerAssemblies.swift */; };
@@ -114,6 +116,8 @@
 		A54C324C26812B3E00F0A9BE /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		A54CD1922677DCC700B6D185 /* CellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresenter.swift; sourceTree = "<group>"; };
 		A55594A02680F29C00B311EA /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		A558B8282687C244004C8A68 /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
+		A558B82D2687C956004C8A68 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		A559B0D826826EA600DBAB93 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A55C1F1B2681AB2900E06DAF /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -153,7 +157,7 @@
 		A5C01CE126517B9A008B2E3B /* RecipesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDetailsViewController.swift; sourceTree = "<group>"; };
 		A5C01CE226517B9A008B2E3B /* RecipesDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesDetailsViewController.xib; sourceTree = "<group>"; };
 		A5D4C6E0267731CE0045D47B /* RecipeCellPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellPresenterFactory.swift; sourceTree = "<group>"; };
-		A5D4C6E5267735330045D47B /* RecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePresenter.swift; sourceTree = "<group>"; };
+		A5D4C6E5267735330045D47B /* RecipesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesPresenter.swift; sourceTree = "<group>"; };
 		A5D4C6EA2677369A0045D47B /* RecipeViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerInput.swift; sourceTree = "<group>"; };
 		A5D4C6EF26773BE80045D47B /* RecipeViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerOutput.swift; sourceTree = "<group>"; };
 		A5EA1FD7266E7044003B9389 /* ControllerAssemblies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAssemblies.swift; sourceTree = "<group>"; };
@@ -305,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				A5ABA3B92673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift */,
-				A5D4C6E5267735330045D47B /* RecipePresenter.swift */,
+				A5D4C6E5267735330045D47B /* RecipesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -372,6 +376,7 @@
 				A55C1F242681C59A00E06DAF /* NetworkRouter.swift */,
 				A559B0D826826EA600DBAB93 /* Router.swift */,
 				A52B95C326832BAE0036278C /* Manager */,
+				A558B8282687C244004C8A68 /* ImageUploadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 			children = (
 				A5EA1FD7266E7044003B9389 /* ControllerAssemblies.swift */,
 				A5EA1FDF266E748E003B9389 /* ControllersFactory.swift */,
+				A558B82D2687C956004C8A68 /* ServiceFactory.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -813,6 +819,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A558B82E2687C956004C8A68 /* ServiceFactory.swift in Sources */,
 				A558E2C4266419F40081B1BA /* FavoritesPresenter.swift in Sources */,
 				A5D4C6EB2677369A0045D47B /* RecipeViewControllerInput.swift in Sources */,
 				A5C01CD8265176C2008B2E3B /* RecipesViewCell.swift in Sources */,
@@ -828,6 +835,7 @@
 				A5BACAD926693BBA00A3CABA /* Container.swift in Sources */,
 				A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */,
 				A5471649267141AD00965C1E /* RecipeProviderProtocol.swift in Sources */,
+				A558B8292687C244004C8A68 /* ImageUploadService.swift in Sources */,
 				A5C01CE326517B9A008B2E3B /* RecipesDetailsViewController.swift in Sources */,
 				A559B0D926826EA600DBAB93 /* Router.swift in Sources */,
 				A5EA1FD8266E7044003B9389 /* ControllerAssemblies.swift in Sources */,
@@ -835,7 +843,7 @@
 				A54C324726812AB300F0A9BE /* NetworkError.swift in Sources */,
 				A54696C42677578900EA0DBD /* NibReusable.swift in Sources */,
 				A5ABA3DA2673D4800051C15F /* RecipeCollectionViewCellOutput.swift in Sources */,
-				A5D4C6E6267735330045D47B /* RecipePresenter.swift in Sources */,
+				A5D4C6E6267735330045D47B /* RecipesPresenter.swift in Sources */,
 				A5024D6D266941CD001AE4B8 /* FavoritesConfigurator.swift in Sources */,
 				A5024D6826694178001AE4B8 /* FavoritesProvider.swift in Sources */,
 				A5ABA3CF2673D1B30051C15F /* RecipCollectionCellInput.swift in Sources */,
