@@ -17,6 +17,11 @@ class ServiceAssembly: Assembly {
         container.register(ImageUploadServiceProtocol.self) { _ in
             return ImageUploadService()
         }
+        
+        container.register(NetworkManagerProtocol.self) { _ in
+            return NetworkManager()
+        }
+        
     }
 }
 
@@ -26,7 +31,9 @@ class ConfiguratorAssembly: Assembly {
             RecipesConfigurator(
                 recipesProvider: resolver.resolve(RecipeProviderProtocol.self)! ,
                 collectionDataProviderFactory: resolver.resolve(RecipesCollectionDataProviderFactoryProtocol.self)!,
-                cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!
+                cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!,
+                imageUploadServiceFactory: resolver.resolve(ImageUploadServiceFactoryProtocol.self)!,
+                networkManager: resolver.resolve(NetworkManagerProtocol.self)!
             )
         }
     }
@@ -35,10 +42,13 @@ class ConfiguratorAssembly: Assembly {
 class FactoryAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RecipesCollectionDataProviderFactoryProtocol.self) { _ in
-            RecipesCollectionDataProviderFactory()
+            return RecipesCollectionDataProviderFactory()
         }
         container.register(RecipeCellPresenterFactoryProtocol.self) { _ in
-            RecipeCellPresenterFactory()
+            return RecipeCellPresenterFactory()
+        }
+        container.register(ImageUploadServiceFactoryProtocol.self) { resolver in
+            return ImageUploadServiceFactory(mainContainer: container)
         }
     }
 }

@@ -8,21 +8,36 @@
 import Foundation
 import UIKit
 
+enum ResultRequestImageError: String, Error {
+    case failedToGetURL = "Failed To Get URL by string"
+    case failedToGetData = "Failed to get data by URL"
+}
+
+typealias ResultRequestImage = ((Result<Data, ResultRequestImageError>) -> Void)
+
 protocol ImageUploadServiceProtocol {
     
     var queue: DispatchQueue { get set }
-    ///Делает запрос по строке url и возвращает картинку
-    func getImageBy(urlString: String) -> UIImage?
+    ///Делает запрос по строке url и возвращает данные для картинки
+    func getImageDataBy(urlString: String, completeon: @escaping ResultRequestImage)
 }
 
 class ImageUploadService: ImageUploadServiceProtocol {
-
-    var queue: DispatchQueue = .global()
     
-    func getImageBy(urlString: String) -> UIImage? {
-        guard let url = URL(string: urlString) else { return nil }
-        guard let data = try? Data(contentsOf: url) else { return nil}
-        return UIImage(data: data)
+    internal var queue: DispatchQueue = .global(qos: .background)
+    
+    func getImageDataBy(urlString: String, completeon: @escaping ResultRequestImage) {
+        queue.async {
+            guard let url = URL(string: urlString) else {
+                completeon(.failure(.failedToGetURL))
+                return
+            }
+            guard let data = try? Data(contentsOf: url) else {
+                completeon(.failure(.failedToGetData))
+                return
+            }
+            completeon(.success(data))
+        }
     }
     
 }

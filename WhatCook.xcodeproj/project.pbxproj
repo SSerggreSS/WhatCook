@@ -30,7 +30,7 @@
 		A54CD1932677DCC700B6D185 /* CellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD1922677DCC700B6D185 /* CellPresenter.swift */; };
 		A55594A12680F29C00B311EA /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55594A02680F29C00B311EA /* EndPointType.swift */; };
 		A558B8292687C244004C8A68 /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558B8282687C244004C8A68 /* ImageUploadService.swift */; };
-		A558B82E2687C956004C8A68 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558B82D2687C956004C8A68 /* ServiceFactory.swift */; };
+		A558B82E2687C956004C8A68 /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558B82D2687C956004C8A68 /* ServicesFactory.swift */; };
 		A558E2C4266419F40081B1BA /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */; };
 		A559B0D926826EA600DBAB93 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559B0D826826EA600DBAB93 /* Router.swift */; };
 		A55C1F1C2681AB2900E06DAF /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C1F1B2681AB2900E06DAF /* JSONParameterEncoder.swift */; };
@@ -48,6 +48,7 @@
 		A5B7974A2660211B00B9E88E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B797492660211B00B9E88E /* GlobalVariables.swift */; };
 		A5BACAD926693BBA00A3CABA /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BACAD826693BBA00A3CABA /* Container.swift */; };
 		A5BACADF26693DB300A3CABA /* RecipesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BACADE26693DB300A3CABA /* RecipesProvider.swift */; };
+		A5BCFF43268A58DB007A618C /* UIView+setCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCFF42268A58DB007A618C /* UIView+setCornerRadius.swift */; };
 		A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C01C6A265153CC008B2E3B /* AppDelegate.swift */; };
 		A5C01C72265153CC008B2E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C01C70265153CC008B2E3B /* Main.storyboard */; };
 		A5C01C74265153CF008B2E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C01C73265153CF008B2E3B /* Assets.xcassets */; };
@@ -117,7 +118,7 @@
 		A54CD1922677DCC700B6D185 /* CellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresenter.swift; sourceTree = "<group>"; };
 		A55594A02680F29C00B311EA /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		A558B8282687C244004C8A68 /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
-		A558B82D2687C956004C8A68 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		A558B82D2687C956004C8A68 /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
 		A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		A559B0D826826EA600DBAB93 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A55C1F1B2681AB2900E06DAF /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		A5B797492660211B00B9E88E /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		A5BACAD826693BBA00A3CABA /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		A5BACADE26693DB300A3CABA /* RecipesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesProvider.swift; sourceTree = "<group>"; };
+		A5BCFF42268A58DB007A618C /* UIView+setCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setCornerRadius.swift"; sourceTree = "<group>"; };
 		A5C01C67265153CC008B2E3B /* WhatCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C01C6A265153CC008B2E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C01C71265153CC008B2E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,7 +266,8 @@
 		A54696BD2677562F00EA0DBD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A54696BE2677565E00EA0DBD /* UICollectionView+dequeueReusableCell.swift */,
+				A5BCFF41268A58A5007A618C /* UIView */,
+				A5BCFF40268A5895007A618C /* UICollectionView */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +306,16 @@
 				A558E2C3266419F40081B1BA /* FavoritesPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A58D12A9268883FC00C0DF66 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				A558B82D2687C956004C8A68 /* ServicesFactory.swift */,
+				A5EA1FDF266E748E003B9389 /* ControllersFactory.swift */,
+			);
+			name = Factories;
+			path = Helpers/Factories;
 			sourceTree = "<group>";
 		};
 		A5ABA3B82673CD970051C15F /* Presenter */ = {
@@ -391,6 +404,22 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		A5BCFF40268A5895007A618C /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A54696BE2677565E00EA0DBD /* UICollectionView+dequeueReusableCell.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		A5BCFF41268A58A5007A618C /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A5BCFF42268A58DB007A618C /* UIView+setCornerRadius.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		A5C01C5E265153CC008B2E3B = {
 			isa = PBXGroup;
 			children = (
@@ -418,10 +447,10 @@
 			isa = PBXGroup;
 			children = (
 				A54696BD2677562F00EA0DBD /* Extensions */,
+				A58D12A9268883FC00C0DF66 /* Factories */,
 				A5ABA3C82673CF7E0051C15F /* Helpers */,
 				A5EA1FD6266E700C003B9389 /* Assemblies */,
 				A5BACAE326693DBA00A3CABA /* Scenes */,
-				A5BACAD726693A3B00A3CABA /* Containers */,
 				A555949F2680F17200B311EA /* NetworkLayer */,
 				A5EBEB1826656CAE00AF709C /* Factories */,
 				A5C01CB4265168F5008B2E3B /* EnteringProducts */,
@@ -532,9 +561,8 @@
 		A5EA1FD6266E700C003B9389 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
+				A5BACAD726693A3B00A3CABA /* Containers */,
 				A5EA1FD7266E7044003B9389 /* ControllerAssemblies.swift */,
-				A5EA1FDF266E748E003B9389 /* ControllersFactory.swift */,
-				A558B82D2687C956004C8A68 /* ServiceFactory.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -819,7 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A558B82E2687C956004C8A68 /* ServiceFactory.swift in Sources */,
+				A558B82E2687C956004C8A68 /* ServicesFactory.swift in Sources */,
 				A558E2C4266419F40081B1BA /* FavoritesPresenter.swift in Sources */,
 				A5D4C6EB2677369A0045D47B /* RecipeViewControllerInput.swift in Sources */,
 				A5C01CD8265176C2008B2E3B /* RecipesViewCell.swift in Sources */,
@@ -851,6 +879,7 @@
 				A55594A12680F29C00B311EA /* EndPointType.swift in Sources */,
 				A54C3238268127D800F0A9BE /* HTTPMethod.swift in Sources */,
 				A5C01CB72651692F008B2E3B /* EnteringProductsViewController.swift in Sources */,
+				A5BCFF43268A58DB007A618C /* UIView+setCornerRadius.swift in Sources */,
 				A5ABA3B32673CCBA0051C15F /* RecipesConfigurator.swift in Sources */,
 				A5EA1FE0266E748E003B9389 /* ControllersFactory.swift in Sources */,
 				A54C32422681299700F0A9BE /* ParameterEncoding.swift in Sources */,

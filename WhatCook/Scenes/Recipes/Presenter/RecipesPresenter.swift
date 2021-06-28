@@ -9,10 +9,10 @@ import Foundation
 
 class RecipesPresenter {
     
-    lazy var neworkManager = NetworkManager() //TODO: зарегистрировать сервис в контейнере 
-    
+    var imageUploadServiceFactory: ImageUploadServiceFactoryProtocol
     let collectionData: RecipeCollectionDataProtocol!
     let recipePresentorFactory: RecipeCellPresenterFactoryProtocol!
+    let neworkManager: NetworkManagerProtocol!
     private var cellPresenters: [RecipeCollectionCellPresenter] = []
     private var title = "Recipes"
     
@@ -21,9 +21,14 @@ class RecipesPresenter {
     var view: RecipeViewControllerInput?
     
     init(collectionData: RecipeCollectionDataProtocol,
-         recipePresentorFactory: RecipeCellPresenterFactoryProtocol) {
+         recipePresentorFactory: RecipeCellPresenterFactoryProtocol,
+         imageUploadServiceFactory: ImageUploadServiceFactoryProtocol,
+         neworkManager: NetworkManagerProtocol) {
         self.collectionData = collectionData
         self.recipePresentorFactory = recipePresentorFactory
+        self.imageUploadServiceFactory = imageUploadServiceFactory
+        self.neworkManager = neworkManager
+        getRecipes()
     }
     
 }
@@ -31,7 +36,6 @@ class RecipesPresenter {
 extension RecipesPresenter: RecipeViewControllerOutput {
     func viewIsReady() {
         updateTitle()
-        getRecipes()
     }
     func didSelectCell(with indexPath: IndexPath) {
         guard cellPresenters.indices.contains(indexPath.row) else { return }
@@ -64,7 +68,7 @@ extension RecipesPresenter {
     /// Transfers received recipes to cell presenters
     func mapToCellPresenters(recipes: [Recipe]) {
             cellPresenters = recipes.map { recipe -> RecipeCollectionCellPresenter in
-                return recipePresentorFactory.createRecipeCellPresenter(recipe: recipe, imageUploadService: )
+                return recipePresentorFactory.createRecipeCellPresenter(recipe: recipe, imageUploadService: imageUploadServiceFactory.createImageUploadService())
             }
         updateCellPresenters()
     }

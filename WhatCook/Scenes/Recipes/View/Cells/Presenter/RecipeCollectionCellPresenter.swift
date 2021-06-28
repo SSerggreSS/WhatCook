@@ -15,38 +15,14 @@ class RecipeCollectionCellPresenter {
     private(set) var recipe: Recipe
     ///Service for upload image by url
     private(set) var imageUploadService: ImageUploadServiceProtocol
-    ///Factory for create service
-    let imageUploadServiceFactory: ImageUploadServiceFactoryProtocol
     /// Image for meal form recipe
-    private var mealImage: UIImage?
-    
-    
     weak var view: RecipeCollectionCellInput?
     
-    init(recipe: Recipe, imageUploadServiceFactory: ImageUploadServiceFactoryProtocol) {
+    init(recipe: Recipe, imageUploadService: ImageUploadServiceProtocol) {
         self.recipe = recipe
-        self.imageUploadServiceFactory = imageUploadServiceFactory
-        imageUploadService = imageUploadServiceFactory.createImageUploadService()
-        mealImage = imageUploadService.getImageBy(urlString: recipe.imageUrl)
+        self.imageUploadService = imageUploadService
     }
 
-}
-
-//MARK: - internal extension RecipeCollectionCellPresenter
-
-extension RecipeCollectionCellPresenter {
-    var image: UIImage? {
-        var image: UIImage?
-        DispatchQueue.global(qos: .background).async {
-            guard let urlImage = URL(string: self.recipe.imageUrl) else { return }
-            guard let data = try? Data(contentsOf: urlImage) else { return }
-            DispatchQueue.main.async {
-                image = UIImage(data: data)
-            }
-        }
-    
-        return image
-    }
 }
 
 //MARK: private extension RecipeCollectionCellPresenter
@@ -62,7 +38,16 @@ private extension RecipeCollectionCellPresenter {
 extension RecipeCollectionCellPresenter: RecipeCollectionViewCellOutput {
     func viewIsReady() {
         updateTitle()
-        view?.updateMeal(image: image)
+        imageUploadService.getImageDataBy(urlString: recipe.imageUrl) { result in
+            switch result {
+            case .failure(let error):
+                //TODO: process error
+                fatalError(error.rawValue)
+            case .success(let data):
+                self.view?.updateMealImageWith(data: data)
+            }
+            
+        }
     }
 }
 

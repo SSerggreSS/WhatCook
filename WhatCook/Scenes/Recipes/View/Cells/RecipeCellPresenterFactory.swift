@@ -8,13 +8,13 @@
 import Foundation
 
 protocol RecipeCellPresenterFactoryProtocol {
-    func createRecipeCellPresenter(recipe: Recipe, imageUploadService: ImageUploadServiceFactoryProtocol) -> RecipeCollectionCellPresenter
+    func createRecipeCellPresenter(recipe: Recipe, imageUploadService: ImageUploadServiceProtocol) -> RecipeCollectionCellPresenter
 }
 
-class RecipeCellPresenterFactory: RecipeCellPresenterFactoryProtocol {
+class RecipeCellPresenterFactory:  RecipeCellPresenterFactoryProtocol {
     
     func createRecipeCellPresenter(recipe: Recipe,
-                                   imageUploadService: ImageUploadServiceFactoryProtocol) -> RecipeCollectionCellPresenter {
-        return RecipeCollectionCellPresenter(recipe: recipe, imageUploadServiceFactory: imageUploadService)
+                                   imageUploadService: ImageUploadServiceProtocol) -> RecipeCollectionCellPresenter {
+        return RecipeCollectionCellPresenter(recipe: recipe, imageUploadService: imageUploadService)
     }
 }

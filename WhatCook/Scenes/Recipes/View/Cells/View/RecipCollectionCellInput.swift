@@ -13,5 +13,5 @@ protocol RecipeCollectionCellInput: AnyObject {
     func updateTitle(text: String)
     
     /// Обновить картинку еды
-    func updateMeal(image: UIImage?)
+    func updateMealImageWith(data: Data)
 }

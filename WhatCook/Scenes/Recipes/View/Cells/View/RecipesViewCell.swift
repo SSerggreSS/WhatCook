@@ -12,12 +12,17 @@ class RecipesViewCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var foodDishNameLabel: UILabel!
     @IBOutlet weak var foodDishImageView: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var presenter: RecipeCollectionCellPresenter!
+    
     let mainQueue = DispatchQueue.main
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        foodDishNameLabel.backgroundColor = .gray
+        foodDishNameLabel.backgroundColor = .black
+        self.setCornerRadiusWith(10)
     }
 
 }
@@ -25,7 +30,10 @@ class RecipesViewCell: UICollectionViewCell, Reusable {
 
 extension RecipesViewCell {
     func configureWith(_ presenter: RecipeCollectionCellPresenter) {
+        self.presenter = presenter
+        self.presenter.view = self
         self.foodDishNameLabel.text = presenter.recipe.name
+        self.presenter.viewIsReady()
     }
 }
 
@@ -35,9 +43,10 @@ extension RecipesViewCell: RecipeCollectionCellInput {
         foodDishNameLabel.text = text
     }
     
-    func updateMeal(image: UIImage?) {
+    func updateMealImageWith(data: Data) {
         mainQueue.async { [weak self] in
-            self?.foodDishImageView.image = image
+            self?.foodDishImageView.image = UIImage(data: data)
+            self?.activityIndicator.stopAnimating()
         }
     }
 

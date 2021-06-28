@@ -7,7 +7,11 @@
 
 import Foundation
 
-class NetworkManager {
+protocol NetworkManagerProtocol {
+    func getNewRecipes(completion: @escaping (_ recipes: [Recipe]?, _ error: String?) -> Void)
+}
+
+class NetworkManager: NetworkManagerProtocol {
     
     static let environment: NetworkEnvironment = .production
     static let recipeAPIKey = ""

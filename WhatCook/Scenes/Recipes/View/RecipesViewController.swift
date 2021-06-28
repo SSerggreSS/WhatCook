@@ -13,7 +13,6 @@ class RecipesViewController: UIViewController {
     private var presenter: RecipeViewControllerOutput?
     private var collectionViewDataSource: CollectionViewDataSource?
     let sectionEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-    var dataWasRequestedFromTheServer = false
     let mainQueue = DispatchQueue.main
     
     convenience init(presenter: RecipeViewControllerOutput,
@@ -27,7 +26,7 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipesCollectionView?.backgroundColor = .red
+        recipesCollectionView?.backgroundColor = .systemOrange
         recipesCollectionView.dataSource = collectionViewDataSource
         recipesCollectionView.delegate = self
         let nib = UINib(nibName: RecipesViewCell.reusableIdentifier, bundle: nil)
@@ -54,9 +53,8 @@ extension RecipesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let widthPerItem: CGFloat = 100
-        let heightPerItem: CGFloat = 100
-        return CGSize(width: widthPerItem, height: heightPerItem)
+        let widthPerItem: CGFloat = UIScreen.main.bounds.width - sectionEdgeInsets.left
+        return CGSize(width: widthPerItem, height: widthPerItem * 0.8)
     }
     
 }
@@ -68,7 +66,6 @@ private extension RecipesViewController {
         
         init(dataProvider: RecipesCollectionViewDataProviderProtocol) {
             self.dataProvider = dataProvider
-            print(dataProvider.numberOfRows(in: 0))
         }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
