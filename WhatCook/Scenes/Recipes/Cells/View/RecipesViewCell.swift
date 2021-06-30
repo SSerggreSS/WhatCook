@@ -18,11 +18,18 @@ class RecipesViewCell: UICollectionViewCell, Reusable {
     
     let mainQueue = DispatchQueue.main
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        foodDishImageView.image = nil
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         foodDishNameLabel.backgroundColor = .black
         self.setCornerRadiusWith(10)
+        foodDishNameLabel.setCornerRadiusWith(10)
+        activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
     }
 
 }
@@ -33,6 +40,8 @@ extension RecipesViewCell {
         self.presenter = presenter
         self.presenter.view = self
         self.foodDishNameLabel.text = presenter.recipe.name
+        activityIndicator.startAnimating()
+        foodDishImageView.image = UIImage(named: "clockBlack")
         self.presenter.viewIsReady()
     }
 }

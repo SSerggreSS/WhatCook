@@ -38,15 +38,19 @@ private extension RecipeCollectionCellPresenter {
 extension RecipeCollectionCellPresenter: RecipeCollectionViewCellOutput {
     func viewIsReady() {
         updateTitle()
-        imageUploadService.getImageDataBy(urlString: recipe.imageUrl) { result in
-            switch result {
-            case .failure(let error):
-                //TODO: process error
-                fatalError(error.rawValue)
-            case .success(let data):
-                self.view?.updateMealImageWith(data: data)
+        if let imageData = recipe.imageData {
+            self.view?.updateMealImageWith(data: imageData)
+        } else {
+            imageUploadService.getImageDataBy(urlString: recipe.imageUrl) { [weak self] result in
+                switch result {
+                case .failure(let error):
+                    //TODO: process error
+                    fatalError(error.rawValue)
+                case .success(let data):
+                    self?.view?.updateMealImageWith(data: data)
+                    self?.recipe.imageData = data
+                }
             }
-            
         }
     }
 }

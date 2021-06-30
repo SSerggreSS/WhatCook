@@ -33,7 +33,8 @@ class ConfiguratorAssembly: Assembly {
                 collectionDataProviderFactory: resolver.resolve(RecipesCollectionDataProviderFactoryProtocol.self)!,
                 cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!,
                 imageUploadServiceFactory: resolver.resolve(ImageUploadServiceFactoryProtocol.self)!,
-                networkManager: resolver.resolve(NetworkManagerProtocol.self)!
+                networkManager: resolver.resolve(NetworkManagerProtocol.self)!,
+                recipeDetailsControllerFactory: resolver.resolve(RecipeDetailsViewControllerFactoryProtocol.self)!
             )
         }
     }
@@ -49,6 +50,9 @@ class FactoryAssembly: Assembly {
         }
         container.register(ImageUploadServiceFactoryProtocol.self) { resolver in
             return ImageUploadServiceFactory(mainContainer: container)
+        }
+        container.register(RecipeDetailsViewControllerFactoryProtocol.self) { _ in
+            return RecipeDetailsViewControllerFactory(mainContainer: container)
         }
     }
 }

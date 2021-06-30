@@ -12,25 +12,6 @@ struct RecipeApiResponse {
     let recipes: [Recipe]
 }
 
-struct Recipe: Decodable {
-    let name: String
-    let imageUrl: String
-}
-
-extension Recipe {
-    private enum RecipeCodingKeys: String, CodingKey {
-        case name = "name"
-       case imageUrl = "thumbnail_url"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: RecipeCodingKeys.self)
-        name = try container.decode(String.self, forKey: .name)
-        imageUrl = try container.decode(String.self, forKey: .imageUrl)
-    }
-    
-}
-
 extension RecipeApiResponse: Decodable {
     
    private enum RecipeApiResponseCodingKeys: String, CodingKey {
@@ -45,4 +26,45 @@ extension RecipeApiResponse: Decodable {
     }
     
 }
+
+struct Recipe: Decodable {
+    let name: String
+    let imageUrl: String
+    let instructions: [Instruction]
+    
+    var imageData: Data?
+    
+}
+
+extension Recipe {
+    private enum RecipeCodingKeys: String, CodingKey {
+        case name = "name"
+        case imageUrl = "thumbnail_url"
+        case instructions = "instructions"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: RecipeCodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        imageUrl = try container.decode(String.self, forKey: .imageUrl)
+        instructions = try container.decode([Instruction].self, forKey: .instructions)
+    }
+    
+}
+
+struct Instruction: Decodable {
+    let displayText: String
+}
+
+extension Instruction {
+    private enum InstructionCodingKeys: String, CodingKey {
+        case displayText = "display_text"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: InstructionCodingKeys.self)
+        displayText = try container.decode(String.self, forKey: .displayText)
+    }
+}
+
 

@@ -26,21 +26,31 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipesCollectionView?.backgroundColor = .systemOrange
-        recipesCollectionView.dataSource = collectionViewDataSource
-        recipesCollectionView.delegate = self
+        setupUserInterface()
         let nib = UINib(nibName: RecipesViewCell.reusableIdentifier, bundle: nil)
-        recipesCollectionView.register(nib, forCellWithReuseIdentifier: RecipesViewCell.reusableIdentifier)
+        recipesCollectionView.register(
+            nib,
+            forCellWithReuseIdentifier: RecipesViewCell.reusableIdentifier
+        )
         presenter?.viewIsReady()
     }
     
+}
+
+private extension RecipesViewController {
+    func setupUserInterface() {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
+        recipesCollectionView?.backgroundColor = .systemOrange
+        recipesCollectionView.dataSource = collectionViewDataSource
+        recipesCollectionView.delegate = self
+    }
 }
 
 
 //MARK: - UICollectionViewDelegateFlowLayout
 
 extension RecipesViewController: UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -57,7 +67,13 @@ extension RecipesViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: widthPerItem, height: widthPerItem * 0.8)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectCell(with: indexPath)
+    }
+    
 }
+
+//MARK: - UICollectionViewDataSource
 
 private extension RecipesViewController {
     class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
@@ -87,9 +103,6 @@ private extension RecipesViewController {
 }
 
 extension RecipesViewController: RecipeViewControllerInput {
-    func show(recipes: [Recipe]) {
-
-    }
     
     func reloadData() {
         mainQueue.async {

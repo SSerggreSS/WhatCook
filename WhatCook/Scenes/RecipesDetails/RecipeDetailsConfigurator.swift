@@ -6,7 +6,17 @@
 //
 
 import Foundation
-
-class RecipeDetailsConfigurator {
-    
-}
+//
+//class RecipeDetailsConfigurator: Configurator {
+//    
+//    //let presenter:
+//    
+////    init() {
+////        
+////    }
+//    
+////    func configure() -> UIViewController {
+////        <#code#>
+////    }
+//
+//}

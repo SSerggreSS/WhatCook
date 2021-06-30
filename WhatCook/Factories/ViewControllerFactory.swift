@@ -8,23 +8,20 @@
 import Foundation
 import Swinject
 
-class ViewControllerFactory {
-    var container: Container!
-    
-    init(container: Container) {
-        self.container = container
-    }
-}
 
 //MARK: - RecipeDetailsViewControllerFactory
 
-protocol RecipeDetailsViewControllerFactory {
-    func recipeDetailsViewController() -> RecipesDetailsViewController
+protocol RecipeDetailsViewControllerFactoryProtocol {
+    func recipeDetailsViewController(presenter: RecipeDetailsPresenterInput) -> RecipesDetailsViewController
 }
 
-extension ViewControllerFactory: RecipeDetailsViewControllerFactory {
-    func recipeDetailsViewController() -> RecipesDetailsViewController {
-        return container.resolve(RecipesDetailsViewController.self)!
+class RecipeDetailsViewControllerFactory: BaseFactory { }
+
+extension RecipeDetailsViewControllerFactory: RecipeDetailsViewControllerFactoryProtocol {
+    func recipeDetailsViewController(presenter: RecipeDetailsPresenterInput) -> RecipesDetailsViewController {
+        let recipeDetailsViewController = RecipesDetailsViewController()
+        recipeDetailsViewController.presenter = presenter
+        return recipeDetailsViewController
     }
 }
 

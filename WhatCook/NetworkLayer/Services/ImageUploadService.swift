@@ -24,7 +24,7 @@ protocol ImageUploadServiceProtocol {
 
 class ImageUploadService: ImageUploadServiceProtocol {
     
-    internal var queue: DispatchQueue = .global(qos: .background)
+    internal var queue: DispatchQueue = .global(qos: .utility)
     
     func getImageDataBy(urlString: String, completeon: @escaping ResultRequestImage) {
         queue.async {

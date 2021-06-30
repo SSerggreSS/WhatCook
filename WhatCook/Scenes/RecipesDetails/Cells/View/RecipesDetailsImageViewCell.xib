@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fish" translatesAutoresizingMaskIntoConstraints="NO" id="7Tx-X9-4Nb">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="7Tx-X9-4Nb">
                         <rect key="frame" x="8" y="8" width="304" height="198"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-CD-WSA">
@@ -29,10 +29,10 @@
                                     <constraint firstAttribute="width" secondItem="8CI-1n-FD0" secondAttribute="height" multiplier="22:21" id="yow-WX-Wm1"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.75005918739999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="star.fill" catalog="system"/>
+                                <state key="normal" image="star" catalog="system"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-Sw-B8o">
-                                <rect key="frame" x="8" y="8" width="86" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-Sw-B8o">
+                                <rect key="frame" x="8" y="8" width="77" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="fish" width="800" height="533"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="clock" width="512" height="512"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

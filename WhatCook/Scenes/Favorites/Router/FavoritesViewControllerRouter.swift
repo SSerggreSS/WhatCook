@@ -14,19 +14,20 @@ protocol FavoritesViewControllerRouterInput: class  {
 
 class FavoritesViewControllerRouter {
     
-    var recipeDetailsFactory: RecipeDetailsViewControllerFactory!
+    var recipeDetailsFactory: RecipeDetailsViewControllerFactoryProtocol!
     
-    init(recipeDetailsFactory: RecipeDetailsViewControllerFactory) {
+    init(recipeDetailsFactory: RecipeDetailsViewControllerFactoryProtocol) {
         self.recipeDetailsFactory = recipeDetailsFactory
     }
     
     var routerController = UIViewController()
-    var factory: RecipeDetailsViewControllerFactory?
+    var factory: RecipeDetailsViewControllerFactoryProtocol?
 }
 
 extension FavoritesViewControllerRouter: FavoritesViewControllerRouterInput {
     func moveToDetails(recipe: Recipe) {
-        guard let recipeDetailsViewController = factory?.recipeDetailsViewController() else { return }
+        let recipeDetailsPresenter = RecipeDetailsPresenter(recipe: recipe)
+        guard let recipeDetailsViewController = factory?.recipeDetailsViewController(presenter: recipeDetailsPresenter) else { return }
         routerController.navigationController?.pushViewController(recipeDetailsViewController,
                                                                   animated: true)
     }

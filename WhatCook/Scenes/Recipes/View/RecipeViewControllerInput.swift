@@ -15,6 +15,4 @@ protocol RecipeViewControllerInput {
     /// Talk view update title navigation bar
     func updateTitle(_ text: String)
     
-    /// Talk view show geted recipes
-    func show(recipes: [Recipe])
 }

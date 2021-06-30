@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
-class RecipesPresenter {
+class RecipesPresenter: BasePresenter {
     
-    var imageUploadServiceFactory: ImageUploadServiceFactoryProtocol
-    let collectionData: RecipeCollectionDataProtocol!
+    var imageUploadServiceFactory: ImageUploadServiceFactoryProtocol!
     let recipePresentorFactory: RecipeCellPresenterFactoryProtocol!
+    let recipeDetailsControllerFactory: RecipeDetailsViewControllerFactoryProtocol!
+    let collectionData: RecipeCollectionDataProtocol!
+    
     let neworkManager: NetworkManagerProtocol!
     private var cellPresenters: [RecipeCollectionCellPresenter] = []
     private var title = "Recipes"
@@ -23,11 +26,14 @@ class RecipesPresenter {
     init(collectionData: RecipeCollectionDataProtocol,
          recipePresentorFactory: RecipeCellPresenterFactoryProtocol,
          imageUploadServiceFactory: ImageUploadServiceFactoryProtocol,
-         neworkManager: NetworkManagerProtocol) {
+         neworkManager: NetworkManagerProtocol,
+         recipeDetailsControllerFactory: RecipeDetailsViewControllerFactoryProtocol) {
         self.collectionData = collectionData
         self.recipePresentorFactory = recipePresentorFactory
         self.imageUploadServiceFactory = imageUploadServiceFactory
         self.neworkManager = neworkManager
+        self.recipeDetailsControllerFactory = recipeDetailsControllerFactory
+        super.init()
         getRecipes()
     }
     
@@ -40,14 +46,15 @@ extension RecipesPresenter: RecipeViewControllerOutput {
     func didSelectCell(with indexPath: IndexPath) {
         guard cellPresenters.indices.contains(indexPath.row) else { return }
         let presenter = cellPresenters[indexPath.row]
+        moveToDetailsFor(recipe: presenter.recipe)
         //TODO: open details recipe
     }
 }
 
-extension RecipesPresenter {
+private extension RecipesPresenter {
     
     func updateTitle() {
-        view?.updateTitle(title)
+        view?.updateTitle(local("RECIPES", "RecipeDetails"))
     }
     
     func getRecipes() {
@@ -77,4 +84,22 @@ extension RecipesPresenter {
         collectionData.updateCellPresenters(cellPresenters)
         view?.reloadData()
     }
+    
+    func moveToDetailsFor(recipe: Recipe) {
+        //TODO:
+        let recipeDetailsPresenter = RecipeDetailsPresenter(recipe: recipe)
+        let recipeDetailsController = recipeDetailsControllerFactory.recipeDetailsViewController(
+            presenter: recipeDetailsPresenter
+        )
+        recipeDetailsPresenter.view = recipeDetailsController
+        let _ = UINavigationController(
+            rootViewController: recipeDetailsController
+        )
+
+        router?.navigationController?.pushViewController(
+            recipeDetailsController,
+            animated: true
+        )
+    }
+    
 }
