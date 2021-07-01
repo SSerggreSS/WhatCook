@@ -30,6 +30,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.75005918739999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="onFavoriteButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6ln-xw-08r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-Sw-B8o">
                                 <rect key="frame" x="8" y="8" width="77" height="28"/>

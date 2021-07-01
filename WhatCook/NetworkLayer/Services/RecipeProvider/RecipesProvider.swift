@@ -16,7 +16,7 @@ class RecipesProvider: RecipeProviderProtocol {
 //                "x-rapidapi-host": "tasty.p.rapidapi.com"
 //            ]
 
-            let request = NSMutableURLRequest(url: NSURL(string: "https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes")! as URL,
+            let request = NSMutableURLRequest(url: NSURL(string: "https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes")! as URL,
                                                     cachePolicy: .useProtocolCachePolicy,
                                                 timeoutInterval: 10.0)
             request.httpMethod = "GET"

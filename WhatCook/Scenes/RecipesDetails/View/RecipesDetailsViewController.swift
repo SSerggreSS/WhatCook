@@ -95,6 +95,16 @@ extension RecipesDetailsViewController: UITableViewDataSource {
 
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height: CGFloat = 0
+        if indexPath.row == 0 {
+            height = 400
+        } else {
+            height = UITableView.automaticDimension
+        }
+        return height
+    }
+    
 }
 
 //MARK: - UITableViewDelegate
@@ -115,7 +125,7 @@ extension RecipesDetailsViewController: RecipesDetailsViewControllerInput {
     
     func updateTitle(text: String) {
         navigationItem.title = text
-    }
+    }   
     
 }
 

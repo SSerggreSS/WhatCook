@@ -34,7 +34,7 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efl-Em-PMG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efl-Em-PMG" userLabel="FavoriteButton">
                                 <rect key="frame" x="256" y="156" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="KtL-bk-zRQ"/>
@@ -42,6 +42,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.75005918739999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="onFavoriteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4U7-y0-EnA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,6 +73,7 @@
             </constraints>
             <connections>
                 <outlet property="activityIndicator" destination="g4Q-De-Ana" id="t5i-bv-kcC"/>
+                <outlet property="favoriteButton" destination="Efl-Em-PMG" id="gEb-rc-HyZ"/>
                 <outlet property="foodDishImageView" destination="0mz-tv-Av6" id="T3d-jT-V9K"/>
                 <outlet property="foodDishNameLabel" destination="Fad-e4-Sgb" id="BPa-Ev-Bso"/>
             </connections>

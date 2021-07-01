@@ -28,16 +28,28 @@ extension RecipeApiResponse: Decodable {
 }
 
 struct Recipe: Decodable {
-    let name: String
-    let imageUrl: String
-    let instructions: [Instruction]
+    
+    var id: Int
+    var name: String
+    var imageUrl: String
+    var instructions: [Instruction]
     
     var imageData: Data?
+    var isFavorite: Bool = false
+    
+    init() {
+        self.id = 0
+        self.name = ""
+        self.imageUrl = ""
+        self.instructions = [Instruction]()
+        self.imageData = Data()
+    }
     
 }
 
 extension Recipe {
     private enum RecipeCodingKeys: String, CodingKey {
+        case id = "id"
         case name = "name"
         case imageUrl = "thumbnail_url"
         case instructions = "instructions"
@@ -48,6 +60,7 @@ extension Recipe {
         name = try container.decode(String.self, forKey: .name)
         imageUrl = try container.decode(String.self, forKey: .imageUrl)
         instructions = try container.decode([Instruction].self, forKey: .instructions)
+        id = try container.decode(Int.self, forKey: .id)
     }
     
 }

@@ -8,5 +8,7 @@
 import Foundation
 
 protocol RecipeCollectionViewCellOutput: AnyObject {
+    var view: RecipeCollectionCellInput? { get set }
     func viewIsReady()
+    func addOrDeleteRecipeInFavorites()
 }

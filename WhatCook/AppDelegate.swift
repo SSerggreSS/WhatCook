@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,15 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = configurator.configure()
         window?.makeKeyAndVisible()
         
-//        let networkManager = NetworkManager()
+//       let rs =  RealmService()
 //
-//        networkManager.getNewRecipes { recipes, error in
-//            if let error = error {
-//                print(error)
-//            } else {
-//                print(recipes!)
-//            }
+//        let ro = RRecipe()
+//        ro.name = "yyyyyyyyy"
+//        ro.id = 123
+//        rs.writeObject([ro]) {
+//            print("succes!!")
 //        }
+//        var resObj = [RRecipe]()
+//        rs.readObjects { o in
+//            o?.forEach { ob in
+//                print(ob.name)
+//            }
+//        } //let realm =
         
         return true
     }

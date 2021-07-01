@@ -14,4 +14,7 @@ protocol RecipeCollectionCellInput: AnyObject {
     
     /// Обновить картинку еды
     func updateMealImageWith(data: Data)
+    
+    ///Установить картинку с помощью данных
+    func setFavoriteButtonImageWith(name: String)
 }

@@ -7,9 +7,14 @@
 
 import Foundation
 
-protocol RecipesDetailsImageViewCellPresenterInput: BasePresenterInput { }
+protocol RecipesDetailsImageViewCellPresenterInput: BasePresenterInput {
+    ///Добавить или удалить рецепт из базы данных
+    func addOrDeleteRecipeInFavorites()
+}
 
 class RecipesDetailsImageViewCellPresenter {
+    
+    let realmService: DataBaseServiceProtocol = RealmService()
     
     private let recipe: Recipe!
     weak private var view: RecipesDetailsImageViewCellInput!
@@ -22,6 +27,25 @@ class RecipesDetailsImageViewCellPresenter {
 }
 
 extension RecipesDetailsImageViewCellPresenter: RecipesDetailsImageViewCellPresenterInput {
+    
+    func addOrDeleteRecipeInFavorites() {
+        guard let realmRecipe = RecipeMapper.mapTo(item: recipe) else { return }
+        if let existObject = realmService.realm.object(
+            ofType: RRecipe.self,
+            forPrimaryKey: realmRecipe.id
+        ) {
+            realmService.deleteObject([existObject]) { [weak self] in
+                self?.view?.setFavoriteButtonImageWith(name: "star")
+                print("💥💥💥 !!!Recipe will be deleted in favorites!!! 💥💥💥")
+            }
+        } else {
+            realmService.writeObject([realmRecipe], succesCompletion: { [weak self] in
+                //TODO: показать тостер что рецепт добавлен в избранное
+                self?.view?.setFavoriteButtonImageWith(name: "star.fill")
+                print("★★★ !!!Recipe will be added in favorites!!! ★★★")
+        })
+    }
+ }
     
     func viewDidLoad() {
         view?.updateInterfaceWith(recipe)

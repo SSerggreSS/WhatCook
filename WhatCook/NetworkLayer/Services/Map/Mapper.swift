@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class Mapper<T,J> {
+    
+    class func mapTo(item: T) -> J? {
+        return nil
+    }
+    
+    class func mapFrom(item: J) -> T? {
+        return nil
+    }
+    
+}

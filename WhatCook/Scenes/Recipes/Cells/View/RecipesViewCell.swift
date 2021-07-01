@@ -14,7 +14,9 @@ class RecipesViewCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var presenter: RecipeCollectionCellPresenter!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    var presenter: RecipeCollectionViewCellOutput!
     
     let mainQueue = DispatchQueue.main
     
@@ -25,17 +27,32 @@ class RecipesViewCell: UICollectionViewCell, Reusable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUserInterface()
+    }
+    
+    @IBAction func onFavoriteButton(_ sender: UIButton) {
+        presenter.addOrDeleteRecipeInFavorites()
+    }
+    
+}
+
+//MARK: - Private Help functions
+
+private extension RecipesViewCell {
+    func setupUserInterface() {
+        activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        favoriteButton.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         foodDishNameLabel.backgroundColor = .black
         self.setCornerRadiusWith(10)
         foodDishNameLabel.setCornerRadiusWith(10)
-        activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
     }
-
 }
 
+//MARK: - Open Help functions
 
 extension RecipesViewCell {
+    
     func configureWith(_ presenter: RecipeCollectionCellPresenter) {
         self.presenter = presenter
         self.presenter.view = self
@@ -44,9 +61,11 @@ extension RecipesViewCell {
         foodDishImageView.image = UIImage(named: "clockBlack")
         self.presenter.viewIsReady()
     }
+    
 }
 
 extension RecipesViewCell: RecipeCollectionCellInput {
+    
     
     func updateTitle(text: String) {
         foodDishNameLabel.text = text
@@ -59,4 +78,11 @@ extension RecipesViewCell: RecipeCollectionCellInput {
         }
     }
 
+    func setFavoriteButtonImageWith(name: String) {
+        if #available(iOS 13.0, *) {
+            DispatchQueue.main.async {
+                self.favoriteButton.imageView?.image = UIImage(systemName: name)
+            }
+        }
+    }
 }
