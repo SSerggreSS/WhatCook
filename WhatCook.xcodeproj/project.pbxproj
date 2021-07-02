@@ -45,6 +45,9 @@
 		A56256F1268DA92D00776549 /* DBServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56256F0268DA92D00776549 /* DBServiceProtocol.swift */; };
 		A56256F6268DAB0800776549 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56256F5268DAB0800776549 /* RealmService.swift */; };
 		A56256FC268DB9DA00776549 /* RealRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56256FB268DB9DA00776549 /* RealRecipeModel.swift */; };
+		A568AF02268F987D001CD087 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568AF01268F987D001CD087 /* TabsViewController.swift */; };
+		A568AF07268F98B9001CD087 /* TabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568AF06268F98B9001CD087 /* TabsPresenter.swift */; };
+		A568AF0C268F9B7B001CD087 /* TabsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568AF0B268F9B7B001CD087 /* TabsConfigurator.swift */; };
 		A57E4114268B76DE005BA0AB /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E4113268B76DE005BA0AB /* BasePresenter.swift */; };
 		A5ABA3B32673CCBA0051C15F /* RecipesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABA3B22673CCBA0051C15F /* RecipesConfigurator.swift */; };
 		A5ABA3BA2673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABA3B92673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift */; };
@@ -143,6 +146,9 @@
 		A56256F0268DA92D00776549 /* DBServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBServiceProtocol.swift; sourceTree = "<group>"; };
 		A56256F5268DAB0800776549 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		A56256FB268DB9DA00776549 /* RealRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealRecipeModel.swift; sourceTree = "<group>"; };
+		A568AF01268F987D001CD087 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
+		A568AF06268F98B9001CD087 /* TabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsPresenter.swift; sourceTree = "<group>"; };
+		A568AF0B268F9B7B001CD087 /* TabsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsConfigurator.swift; sourceTree = "<group>"; };
 		A57E4113268B76DE005BA0AB /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		A5ABA3B22673CCBA0051C15F /* RecipesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesConfigurator.swift; sourceTree = "<group>"; };
 		A5ABA3B92673CDBB0051C15F /* RecipesCollectionViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewDataProvider.swift; sourceTree = "<group>"; };
@@ -415,6 +421,16 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		A568AEF8268F97F6001CD087 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				A568AF01268F987D001CD087 /* TabsViewController.swift */,
+				A568AF06268F98B9001CD087 /* TabsPresenter.swift */,
+				A568AF0B268F9B7B001CD087 /* TabsConfigurator.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		A57E4112268B76C4005BA0AB /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +525,7 @@
 		A5BACAE326693DBA00A3CABA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A568AEF8268F97F6001CD087 /* Tabs */,
 				A5C01CD126517634008B2E3B /* Recipes */,
 				A5C01CEB26517BA1008B2E3B /* RecipesDetails */,
 				A52A3C6026519C1600E8A69B /* Favorites */,
@@ -968,9 +985,11 @@
 			files = (
 				A558B82E2687C956004C8A68 /* ServicesFactory.swift in Sources */,
 				A558E2C4266419F40081B1BA /* FavoritesPresenter.swift in Sources */,
+				A568AF07268F98B9001CD087 /* TabsPresenter.swift in Sources */,
 				A5D4C6EB2677369A0045D47B /* RecipeViewControllerInput.swift in Sources */,
 				A5618AA0268CEE6B005F170F /* Functions.swift in Sources */,
 				A52B0D50268DDB260077DADF /* Mapper.swift in Sources */,
+				A568AF02268F987D001CD087 /* TabsViewController.swift in Sources */,
 				A5C01CD8265176C2008B2E3B /* RecipesViewCell.swift in Sources */,
 				A55F4CC9268BA3BD009046F8 /* BasePresenterInput.swift in Sources */,
 				A52A3C5B26519C1000E8A69B /* FavoritesViewController.swift in Sources */,
@@ -1019,6 +1038,7 @@
 				A5BACADF26693DB300A3CABA /* RecipesProvider.swift in Sources */,
 				A5B7973A266010A600B9E88E /* RecipesDetailsImageViewCell.swift in Sources */,
 				A51C6872267657C00027B4C5 /* RecipesCollectionDataProvider.swift in Sources */,
+				A568AF0C268F9B7B001CD087 /* TabsConfigurator.swift in Sources */,
 				A54696BF2677565E00EA0DBD /* UICollectionView+dequeueReusableCell.swift in Sources */,
 				A56256F1268DA92D00776549 /* DBServiceProtocol.swift in Sources */,
 				A54C323D268128A300F0A9BE /* HTTPTask.swift in Sources */,
