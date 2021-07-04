@@ -19,12 +19,14 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnZ-WP-gSa">
                         <rect key="frame" x="8" y="8" width="303" height="136"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text"> Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes  Some Recipes </string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="GnZ-WP-gSa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Iym-5u-DVb"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GnZ-WP-gSa" secondAttribute="bottom" constant="8" id="Ybn-Kn-EfH"/>

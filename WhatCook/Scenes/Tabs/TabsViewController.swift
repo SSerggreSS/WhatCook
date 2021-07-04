@@ -11,9 +11,14 @@ protocol TabsViewControllerInput: AnyObject { }
 
 class TabsViewController: UITabBarController {
     
-    var presenter: TabsPresenterInput?
-    var contollers: [UINavigationController]?
+    private var presenter: TabsPresenterInput?
+    private var contollers: [UINavigationController]?
  
+    convenience init(tabControllers: [UINavigationController], presenter: TabsPresenterInput) {
+       self.init()
+        self.contollers = tabControllers
+        self.presenter = presenter
+   }
 
     override func viewDidLoad() {
         super.viewDidLoad()

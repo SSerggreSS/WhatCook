@@ -23,10 +23,9 @@ class TabsConfigurator {
         navigationControllers.append(recipeNavigationController)
         
         let tabsPresenter = TabsPresenter()
-        tabsViewController = TabsViewController()
+        tabsViewController = TabsViewController(tabControllers: navigationControllers, presenter: tabsPresenter)
         tabsPresenter.view = tabsViewController
-        tabsViewController.presenter = tabsPresenter
-        tabsViewController.contollers = navigationControllers
+
     }
     
 }

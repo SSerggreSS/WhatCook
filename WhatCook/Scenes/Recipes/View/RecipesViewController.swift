@@ -40,6 +40,7 @@ class RecipesViewController: UIViewController {
 private extension RecipesViewController {
     func setupUserInterface() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
+        navigationController?.navigationBar.tintColor = .black
         recipesCollectionView?.backgroundColor = .systemOrange
         recipesCollectionView.dataSource = collectionViewDataSource
         recipesCollectionView.delegate = self
