@@ -27,21 +27,33 @@ class ServiceAssembly: Assembly {
 
 class ConfiguratorAssembly: Assembly {
     func assemble(container: Container) {
+        
         container.register(RecipesConfigurator.self) { resolver in
-            RecipesConfigurator(
-                recipesProvider: resolver.resolve(RecipeProviderProtocol.self)! ,
-                collectionDataProviderFactory: resolver.resolve(RecipesCollectionDataProviderFactoryProtocol.self)!,
-                cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!,
-                imageUploadServiceFactory: resolver.resolve(ImageUploadServiceFactoryProtocol.self)!,
-                networkManager: resolver.resolve(NetworkManagerProtocol.self)!,
-                recipeDetailsControllerFactory: resolver.resolve(RecipeDetailsViewControllerFactoryProtocol.self)!
+            return RecipesConfigurator(
+                    recipesProvider: resolver.resolve(RecipeProviderProtocol.self)! ,
+                    collectionDataProviderFactory: resolver.resolve(RecipesCollectionDataProviderFactoryProtocol.self)!,
+                    cellPresenterFactory: resolver.resolve(RecipeCellPresenterFactoryProtocol.self)!,
+                    imageUploadServiceFactory: resolver.resolve(ImageUploadServiceFactoryProtocol.self)!,
+                    networkManager: resolver.resolve(NetworkManagerProtocol.self)!,
+                    recipeDetailsControllerFactory: resolver.resolve(RecipeDetailsViewControllerFactoryProtocol.self)!
             )
         }
+        
+        container.register(TabsConfigurator.self) { resolver in
+            return TabsConfigurator(container: container)
+        }
+        
     }
+    
 }
 
 class FactoryAssembly: Assembly {
     func assemble(container: Container) {
+        
+        container.register(BaseFactoryProtocol.self) { resolver in
+            BaseFactory(container: container)
+        }
+        
         container.register(RecipesCollectionDataProviderFactoryProtocol.self) { _ in
             return RecipesCollectionDataProviderFactory()
         }
@@ -49,10 +61,10 @@ class FactoryAssembly: Assembly {
             return RecipeCellPresenterFactory()
         }
         container.register(ImageUploadServiceFactoryProtocol.self) { resolver in
-            return ImageUploadServiceFactory(mainContainer: container)
+            return ImageUploadServiceFactory(container: container)
         }
         container.register(RecipeDetailsViewControllerFactoryProtocol.self) { _ in
-            return RecipeDetailsViewControllerFactory(mainContainer: container)
+            return RecipeDetailsViewControllerFactory(container: container)
         }
     }
 }
@@ -88,11 +100,9 @@ class AppService: AppSeviceProtocol {
         
     }
     
-    
     func start() -> Configurator {
-        return resolver.resolve(RecipesConfigurator.self)!
+        return resolver.resolve(TabsConfigurator.self)!
     }
-    
     
 }
 

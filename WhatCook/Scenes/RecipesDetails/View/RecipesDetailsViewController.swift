@@ -49,9 +49,11 @@ extension RecipesDetailsViewController {
     }
     
     private func setupUserInterface() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.red,
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 30)!
+        ]
     }
-    
 }
 
 extension RecipesDetailsViewController: UITableViewDataSource {

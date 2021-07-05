@@ -23,6 +23,8 @@
 		A54696C42677578900EA0DBD /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54696C32677578900EA0DBD /* NibReusable.swift */; };
 		A54696C9267757AC00EA0DBD /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54696C8267757AC00EA0DBD /* NibLoadable.swift */; };
 		A5471649267141AD00965C1E /* RecipeProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5471648267141AD00965C1E /* RecipeProviderProtocol.swift */; };
+		A549D591269236B5009999CB /* BaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549D590269236B5009999CB /* BaseFactory.swift */; };
+		A549D59626923F00009999CB /* TabsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549D59526923F00009999CB /* TabsFactory.swift */; };
 		A54C3238268127D800F0A9BE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C3237268127D800F0A9BE /* HTTPMethod.swift */; };
 		A54C323D268128A300F0A9BE /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C323C268128A300F0A9BE /* HTTPTask.swift */; };
 		A54C32422681299700F0A9BE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C32412681299700F0A9BE /* ParameterEncoding.swift */; };
@@ -124,6 +126,8 @@
 		A54696C32677578900EA0DBD /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
 		A54696C8267757AC00EA0DBD /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		A5471648267141AD00965C1E /* RecipeProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeProviderProtocol.swift; sourceTree = "<group>"; };
+		A549D590269236B5009999CB /* BaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFactory.swift; sourceTree = "<group>"; };
+		A549D59526923F00009999CB /* TabsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsFactory.swift; sourceTree = "<group>"; };
 		A54C3237268127D800F0A9BE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A54C323C268128A300F0A9BE /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		A54C32412681299700F0A9BE /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -315,6 +319,14 @@
 			path = RecipeProvider;
 			sourceTree = "<group>";
 		};
+		A549D58F269236A5009999CB /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A549D590269236B5009999CB /* BaseFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		A54C324B26812B2400F0A9BE /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +439,7 @@
 				A568AF01268F987D001CD087 /* TabsViewController.swift */,
 				A568AF06268F98B9001CD087 /* TabsPresenter.swift */,
 				A568AF0B268F9B7B001CD087 /* TabsConfigurator.swift */,
+				A549D59526923F00009999CB /* TabsFactory.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 		A57E4112268B76C4005BA0AB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A549D58F269236A5009999CB /* Factory */,
 				A55F4CC7268BA3A9009046F8 /* Presenter */,
 			);
 			path = Base;
@@ -1004,6 +1018,7 @@
 				A5D4C6E1267731CE0045D47B /* RecipeCellPresenterFactory.swift in Sources */,
 				A55F4CD3268BA5A8009046F8 /* RecipesDetailsImageViewCellPresenter.swift in Sources */,
 				A5BACAD926693BBA00A3CABA /* Container.swift in Sources */,
+				A549D59626923F00009999CB /* TabsFactory.swift in Sources */,
 				A5C01C6B265153CC008B2E3B /* AppDelegate.swift in Sources */,
 				A52B0D4A268DD9B50077DADF /* RecipeMapper.swift in Sources */,
 				A5471649267141AD00965C1E /* RecipeProviderProtocol.swift in Sources */,
@@ -1046,6 +1061,7 @@
 				A52B95B426831A350036278C /* RecipeEndPoint.swift in Sources */,
 				A5EBEB1426656B3E00AF709C /* RecipeModel.swift in Sources */,
 				A5EA1FE5266E7564003B9389 /* RecipeDetailsConfigurator.swift in Sources */,
+				A549D591269236B5009999CB /* BaseFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

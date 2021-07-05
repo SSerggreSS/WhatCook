@@ -8,22 +8,37 @@
 import Foundation
 import Swinject
 
-class TabsConfigurator {
+
+
+class TabsConfigurator: Configurator {
+    
+    func configure() -> UIViewController {
+        print("tabsViewController = \(tabsViewController)")
+        return tabsViewController
+    }
+    
     
     var tabsViewController: TabsViewController!
     
-    init(resolver: Resolver) {
+    init(container: Container) {
         
         var navigationControllers = [UINavigationController]()
-        
-        let resipeListItem = UITabBarItem(title: "recipes", image: nil, selectedImage: nil)
-        guard let recipeController = resolver.resolve(RecipesViewController.self) else { return }
-        let recipeNavigationController = UINavigationController(rootViewController: recipeController)
+        var recipeTabImage: UIImage?
+        if #available(iOS 13.0, *) {
+            recipeTabImage = UIImage(systemName: "list.bullet.rectangle")
+        }
+        let resipeListItem = UITabBarItem(
+            title: "recipes",
+            image: recipeTabImage,
+            selectedImage: nil
+        )
+        guard let recipeConfigurator = container.resolve(RecipesConfigurator.self) else { return }
+        let recipeNavigationController = recipeConfigurator.configure() as! UINavigationController
         recipeNavigationController.tabBarItem = resipeListItem
         navigationControllers.append(recipeNavigationController)
-        
         let tabsPresenter = TabsPresenter()
-        tabsViewController = TabsViewController(tabControllers: navigationControllers, presenter: tabsPresenter)
+        tabsViewController = TabsViewController()
+        tabsViewController.viewControllers = navigationControllers
         tabsPresenter.view = tabsViewController
 
     }
