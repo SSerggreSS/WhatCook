@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipesViewController" customModule="WhatCook" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="f3X-HY-PU7" id="GPo-hY-39t"/>
                 <outlet property="recipesCollectionView" destination="527-4T-pgd" id="BAK-Ia-519"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,13 +31,18 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-HY-PU7">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="f3X-HY-PU7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5qE-bT-QHw"/>
                 <constraint firstItem="527-4T-pgd" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Au1-Ur-3Hq"/>
                 <constraint firstItem="527-4T-pgd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UhG-k5-RGM"/>
                 <constraint firstItem="527-4T-pgd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="g3U-7z-dJE"/>
+                <constraint firstItem="f3X-HY-PU7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hwg-n7-OYI"/>
                 <constraint firstAttribute="bottomMargin" secondItem="527-4T-pgd" secondAttribute="bottom" id="niz-68-Oia"/>
             </constraints>
             <point key="canvasLocation" x="-146.37681159420291" y="-31.473214285714285"/>

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController" customModule="WhatCook" customModuleProvider="target">
             <connections>
-                <outlet property="favoritesCollectionView" destination="zhl-DK-vLz" id="20o-D5-wVx"/>
+                <outlet property="favoritesCollectionView" destination="zhl-DK-vLz" id="Zyv-f9-vlg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

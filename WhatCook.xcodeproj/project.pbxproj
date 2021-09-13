@@ -259,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				A5024D6C266941CD001AE4B8 /* FavoritesConfigurator.swift */,
-				A5EA1FCF266E6C82003B9389 /* Model */,
 				A5EBEAF42665694200AF709C /* Router */,
 				A558E2C2266419DD0081B1BA /* Presenter */,
 				A52A3C6126519C2100E8A69B /* View */,
@@ -439,6 +438,7 @@
 				A568AF01268F987D001CD087 /* TabsViewController.swift */,
 				A568AF06268F98B9001CD087 /* TabsPresenter.swift */,
 				A568AF0B268F9B7B001CD087 /* TabsConfigurator.swift */,
+				A5618A9D268CEE47005F170F /* Global */,
 				A549D59526923F00009999CB /* TabsFactory.swift */,
 			);
 			path = Tabs;
@@ -590,7 +590,6 @@
 			isa = PBXGroup;
 			children = (
 				A56256EF268DA8EC00776549 /* DatabaseService */,
-				A5618A9D268CEE47005F170F /* Global */,
 				A5618A72268CEBE1005F170F /* Localization */,
 				A57E4112268B76C4005BA0AB /* Base */,
 				A54696BD2677562F00EA0DBD /* Extensions */,
@@ -697,13 +696,6 @@
 				A5C01CE226517B9A008B2E3B /* RecipesDetailsViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A5EA1FCF266E6C82003B9389 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		A5EA1FD6266E700C003B9389 /* Assemblies */ = {

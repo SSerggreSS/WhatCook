@@ -1,5 +1,8 @@
 PODS:
   - AMTagListView (1.5.0)
+  - MarqueeLabel (3.2.0):
+    - MarqueeLabel/ObjC (= 3.2.0)
+  - MarqueeLabel/ObjC (3.2.0)
   - Realm (10.7.7):
     - Realm/Headers (= 10.7.7)
   - Realm/Headers (10.7.7)
@@ -9,22 +12,25 @@ PODS:
 
 DEPENDENCIES:
   - AMTagListView
+  - MarqueeLabel (= 3.2.0)
   - RealmSwift
   - Swinject
 
 SPEC REPOS:
   trunk:
     - AMTagListView
+    - MarqueeLabel
     - Realm
     - RealmSwift
     - Swinject
 
 SPEC CHECKSUMS:
   AMTagListView: 08ab67466c67152f6299bc29a13a907783b0046f
+  MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
   Realm: 8010af8b7a576ba501729bcbc54a3cd1f1f7dca3
   RealmSwift: dc17e6d649c12a8996f9e962c3fe6cef356885c4
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: cbaac3a8f9af6bc0c7d91e61f1f32028aee1ebe7
+PODFILE CHECKSUM: 1c3262bc99e496943690f72b2a1d81d5f44d0779
 
 COCOAPODS: 1.10.1

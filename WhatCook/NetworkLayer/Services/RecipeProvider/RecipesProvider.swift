@@ -11,11 +11,6 @@ class RecipesProvider: RecipeProviderProtocol {
     let jsonDecoder: JSONDecoder = JSONDecoder()
     func requestAll(completion: @escaping (Result<RecipeApiResponse, RecipeProviderError>) -> Void) {
         DispatchQueue.main.async {
-//            let headers = [
-//                "x-rapidapi-key": "a604cd09b2msha393af041efae88p1588a5jsn7ccad1119372",
-//                "x-rapidapi-host": "tasty.p.rapidapi.com"
-//            ]
-
             let request = NSMutableURLRequest(url: NSURL(string: "https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes")! as URL,
                                                     cachePolicy: .useProtocolCachePolicy,
                                                 timeoutInterval: 10.0)

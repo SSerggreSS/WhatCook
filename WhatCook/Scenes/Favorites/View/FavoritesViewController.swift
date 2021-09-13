@@ -12,8 +12,8 @@ protocol FavoritesViewControllerOutput {
 }
 
 //этот протокол реализует вью контроллер чтобы получать сообщения от презентера
-protocol FavoritesViewControllerInput {
-    func fun()
+protocol FavoritesViewControllerInput: AnyObject {
+    func updateInterface()
 }
 
 class FavoritesViewController: UIViewController {
@@ -26,6 +26,11 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = local("FAVORITES", "RecipeDetails")
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.red,
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 30)!
+        ]
         let nib = UINib(nibName: identRecipeCell, bundle: nil)
         favoritesCollectionView.register(nib, forCellWithReuseIdentifier: identRecipeCell)
         favoritesCollectionView.delegate = self
@@ -36,8 +41,8 @@ class FavoritesViewController: UIViewController {
 }
 
 extension FavoritesViewController: FavoritesViewControllerInput {
-    func fun() {
-        print("Hello from presenter")
+    func updateInterface() {
+        //
     }
 }
 

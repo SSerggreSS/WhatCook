@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 protocol RecipesDetailsImageViewCellInput: AnyObject {
     ///обновляет интерфейс с помощью модели рецепта
@@ -22,7 +23,7 @@ class RecipesDetailsImageViewCell: UITableViewCell {
     
     @IBOutlet weak var recipesImageView: UIImageView!
     @IBOutlet weak var favoriteButton: UIButton!
-    @IBOutlet weak var nameMealLabel: UILabel!
+    @IBOutlet weak var nameMealLabel: MarqueeLabel!
     
     //MARK: - Properties
     

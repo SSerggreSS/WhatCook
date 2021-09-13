@@ -10,6 +10,7 @@ import UIKit
 class RecipesViewController: UIViewController {
 
     @IBOutlet weak var recipesCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private var presenter: RecipeViewControllerOutput?
     private var collectionViewDataSource: CollectionViewDataSource?
     let sectionEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -39,6 +40,8 @@ class RecipesViewController: UIViewController {
 
 private extension RecipesViewController {
     func setupUserInterface() {
+        activityIndicator.startAnimating()
+        self.activityIndicator.hidesWhenStopped.toggle()
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.red,
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 30)!
@@ -111,6 +114,7 @@ extension RecipesViewController: RecipeViewControllerInput {
     
     func reloadData() {
         mainQueue.async {
+            self.activityIndicator.stopAnimating()
             self.recipesCollectionView.reloadData()
         }
     }
@@ -118,6 +122,5 @@ extension RecipesViewController: RecipeViewControllerInput {
     func updateTitle(_ text: String) {
         navigationItem.title = text
     }
-    
     
 }

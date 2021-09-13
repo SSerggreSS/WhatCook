@@ -28,12 +28,24 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-De-Ana">
                                 <rect key="frame" x="131.5" y="81.5" width="37" height="37"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-e4-Sgb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-e4-Sgb" customClass="MarqueeLabel">
                                 <rect key="frame" x="8" y="8" width="96" height="24"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efl-Em-PMG" userLabel="FavoriteButton">
                                 <rect key="frame" x="256" y="156" width="44" height="44"/>
@@ -76,11 +88,16 @@
                 <outlet property="activityIndicator" destination="g4Q-De-Ana" id="t5i-bv-kcC"/>
                 <outlet property="favoriteButton" destination="Efl-Em-PMG" id="gEb-rc-HyZ"/>
                 <outlet property="foodDishImageView" destination="0mz-tv-Av6" id="T3d-jT-V9K"/>
-                <outlet property="foodDishNameLabel" destination="Fad-e4-Sgb" id="BPa-Ev-Bso"/>
+                <outlet property="foodDishNameLabel" destination="Fad-e4-Sgb" id="UtU-JW-SAr"/>
             </connections>
             <point key="canvasLocation" x="-245" y="33"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="Fad-e4-Sgb">
+            <size key="intrinsicContentSize" width="96" height="24"/>
+        </designable>
+    </designables>
     <resources>
         <image name="clockBlack" width="512" height="512"/>
         <image name="star" catalog="system" width="128" height="116"/>

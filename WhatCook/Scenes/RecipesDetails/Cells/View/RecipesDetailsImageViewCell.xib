@@ -34,11 +34,23 @@
                                     <action selector="onFavoriteButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6ln-xw-08r"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-Sw-B8o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-Sw-B8o" customClass="MarqueeLabel">
                                 <rect key="frame" x="8" y="8" width="77" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                        <real key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <constraints>
@@ -67,12 +79,17 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="favoriteButton" destination="8CI-1n-FD0" id="TVW-l4-qiG"/>
-                <outlet property="nameMealLabel" destination="y9V-Sw-B8o" id="7lM-mi-b7E"/>
+                <outlet property="nameMealLabel" destination="y9V-Sw-B8o" id="WLd-Eo-Izl"/>
                 <outlet property="recipesImageView" destination="7Tx-X9-4Nb" id="ES3-Na-cHx"/>
             </connections>
             <point key="canvasLocation" x="56.521739130434788" y="99.107142857142847"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="y9V-Sw-B8o">
+            <size key="intrinsicContentSize" width="77" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="clock" width="512" height="512"/>
         <image name="star" catalog="system" width="128" height="116"/>

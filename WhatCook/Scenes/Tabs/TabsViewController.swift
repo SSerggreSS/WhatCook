@@ -18,6 +18,7 @@ class TabsViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.tintColor = .orange
         tabBar.unselectedItemTintColor = .gray
+        tabBar.backgroundColor = .black
         selectedIndex = 0
     }
     

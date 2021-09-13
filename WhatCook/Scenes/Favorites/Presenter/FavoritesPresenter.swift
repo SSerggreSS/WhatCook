@@ -13,11 +13,20 @@ protocol FavoritesPresenterInput {
 }
 
 class FavoritesPresenter {
-    var view: FavoritesViewControllerInput?
+    
+    weak var view: FavoritesViewControllerInput?
     var router: FavoritesViewControllerRouterInput?
-    var recipes = [
-        Recipe()
-    ]
+    var recipes: [RRecipe]?
+    
+    let realmService = RealmService()
+    
+    init() {
+        realmService.readObjects { recipes in
+            self.recipes = recipes
+            print(recipes?.count)
+        }
+    }
+    
 }
 
 //MARK: - FavoritesPresenterInput
@@ -31,7 +40,7 @@ extension FavoritesPresenter: FavoritesPresenterInput {
 extension FavoritesPresenter: FavoritesViewControllerOutput {
     func selectedCellBy(indexPath: IndexPath) {
         //router push details view controller
-        let recipe = recipes[indexPath.row]
-        router?.moveToDetails(recipe: recipe)
+        let recipe = recipes?[indexPath.row]
+        router?.moveToDetails(rrecipe: recipe)
     }
 }

@@ -34,7 +34,7 @@ class RecipesPresenter: BasePresenter {
         self.neworkManager = neworkManager
         self.recipeDetailsControllerFactory = recipeDetailsControllerFactory
         super.init()
-        getRecipes()
+        getRecipes() 
     }
     
 }

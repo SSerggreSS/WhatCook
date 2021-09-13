@@ -7,6 +7,7 @@ target 'WhatCook' do
   pod 'AMTagListView'
   pod 'Swinject'
   pod 'RealmSwift'
+  pod 'MarqueeLabel', '3.2.0'
   # Pods for WhatCook
 
   target 'WhatCookTests' do

@@ -7,15 +7,13 @@
 
 import Foundation
 import UIKit
-
+//
 //class FavoritesModuleConfigurator {
-//    
-//    private let favoritesProvider: FavoritesProvider
-//    //private let cellPresentersFactory: FavoritesCellPresentersFactory
+//
 //    
 //    static func configure(router: FavoritesViewControllerRouter) -> UIViewController {
 //        let favoritesController = FavoritesViewController()
-//        let router = FavoritesViewControllerRouter(detailsFactory: RecipeDetailsViewControllerFactory)
+//        let router = FavoritesViewControllerRouter(recipeDetailsFactory: RecipeDetailsViewControllerFactoryProtocol as! RecipeDetailsViewControllerFactoryProtocol)
 //        
 //        let presenter = FavoritesPresenter()
 //    }

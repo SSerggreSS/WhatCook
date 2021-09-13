@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FavoritesViewControllerRouterInput: class  {
-    func moveToDetails(recipe: Recipe)
+    func moveToDetails(rrecipe: RRecipe?)
 }
 
 class FavoritesViewControllerRouter {
@@ -25,7 +25,10 @@ class FavoritesViewControllerRouter {
 }
 
 extension FavoritesViewControllerRouter: FavoritesViewControllerRouterInput {
-    func moveToDetails(recipe: Recipe) {
+    
+    func moveToDetails(rrecipe: RRecipe?) {
+        guard let rrecipe = rrecipe else { return }
+        let recipe = RecipeMapper.mapFrom(item: rrecipe)!
         let recipeDetailsPresenter = RecipeDetailsPresenter(recipe: recipe)
         guard let recipeDetailsViewController = factory?.recipeDetailsViewController(presenter: recipeDetailsPresenter) else { return }
         routerController.navigationController?.pushViewController(recipeDetailsViewController,
